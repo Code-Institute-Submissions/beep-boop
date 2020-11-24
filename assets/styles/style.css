@@ -70,3 +70,63 @@ body {
 .btn-green {
     background-color: #26A612;
 }
+
+/*----------------------------------------------------MEDIA QUERIES--*/
+@media (min-width: 576px) {
+    #welcome-container {
+        width: 520px;
+    }
+}
+
+@media (min-width: 768px) {
+    #welcome-container {
+        width: 640px;
+    }
+    .logo {
+        padding: 0 15px 5px 15px;
+        font-size: 4rem;
+    }
+    .tagline {
+        font-size: 1.4rem;
+        margin: 30px 0;
+    }
+    .option-btn {
+        margin: 40px auto;
+        width: 250px;
+        font-size: 1.5rem;
+    }
+    #recommended {
+        bottom: 35px;
+    }
+}
+
+@media (min-width: 992px) {
+    #welcome-container {
+        width: 800px;
+        height: 700px;
+    }
+    #welcome-to {
+        font-size: 2rem;
+        letter-spacing: 10px;
+        margin: 20px;
+    }
+
+    .logo {
+        padding: 0 25px 5px 25px;
+        font-size: 6rem;
+        border-width: 8px;
+    }
+    .option-btn {
+        font-size: 2.2rem;
+        width: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #welcome-container {
+        width: 1000px;
+    }
+    .tagline {
+        font-size: 1.8rem;
+        margin: 30px 0
+}

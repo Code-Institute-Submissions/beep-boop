@@ -1,0 +1,72 @@
+body {
+    background-image: url("../images/background.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-container{
+    width: 90%;
+    min-height: 400px;
+    min-width: 300px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#welcome-to{
+    font-family: bungee;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+
+.logo {
+    font-family: 'Faster One';
+    border: 5px solid #000;
+    border-radius: 30px;
+    display: inline;
+    padding: 0 5px 5px 5px;
+}
+
+.tagline {
+    font-family: 'Bungee Shade';
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+#recommended {
+    font-family: Bungee;
+    font-size: 0.7rem;
+    display: inline;
+    position: relative;
+    bottom: 20px;
+}
+
+.option-btn {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    text-align: center;
+    font-family: Bungee;
+    box-shadow: 4px 5px 1px #000000bf;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    min-width: 175px;
+}
+
+/*----------------------------------------------------COLORS--*/
+.game-yellow {
+    background-color: #FFE922;
+}
+
+.btn-blue {
+    background-color: #09AEAE;
+}
+.btn-red {
+    background-color: #CF1736;
+}
+.btn-green {
+    background-color: #26A612;
+}

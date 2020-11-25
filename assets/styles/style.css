@@ -7,6 +7,17 @@ body {
     align-items: center;
 }
 
+a {
+    color: #fff;
+}
+
+a:hover{
+    color: #000;
+    text-decoration: none;
+    /* TRANSITION EFFECT COPIED FROM BOOTSTRAP */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 .game-container{
     width: 90%;
     min-height: 400px;
@@ -95,13 +106,13 @@ body {
 
 /*----------------------------------------------------MEDIA QUERIES--*/
 @media (min-width: 576px) {
-    .welcome-container {
+    .game-container {
         width: 520px;
     }
 }
 
 @media (min-width: 768px) {
-    .welcome-container {
+    .game-container {
         width: 640px;
     }
     .logo {
@@ -131,7 +142,7 @@ body {
 }
 
 @media (min-width: 992px) {
-    .welcome-container {
+    .game-container {
         width: 800px;
         height: 700px;
     }
@@ -153,7 +164,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .welcome-container {
+    .game-container {
         width: 1000px;
     }
     .tagline {

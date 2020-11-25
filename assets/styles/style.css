@@ -56,6 +56,20 @@ body {
     min-width: 175px;
 }
 
+.modal-container {
+    background-color: #FFF7B0;
+    border-radius: 30px;
+}
+.how-to-play h4 {
+    font-family: Bungee;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.how-to-play p {
+    font-family: 'DM mono';
+    text-align: center;
+}
 /*----------------------------------------------------COLORS--*/
 .game-yellow {
     background-color: #FFE922;
@@ -69,6 +83,9 @@ body {
 }
 .btn-green {
     background-color: #26A612;
+}
+.modal-bg {
+    background-color: #392092bf;
 }
 
 /*----------------------------------------------------MEDIA QUERIES--*/
@@ -92,11 +109,19 @@ body {
     }
     .option-btn {
         margin: 40px auto;
-        width: 250px;
+        width: 260px;
         font-size: 1.5rem;
     }
     #recommended {
         bottom: 35px;
+    }
+    .how-to-play h4 {
+        font-size: 2.8rem;
+    }
+
+    .how-to-play p {
+        font-size: 1.5rem;
+        padding: 10px;
     }
 }
 

@@ -2,15 +2,10 @@
 body {
     background-image: url("../images/background.jpg");
     height: 100vh;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;  */
 }
 
 p {
     font-family: 'DM mono';
-    /* text-align: center; */
 }
 
 a {
@@ -24,10 +19,6 @@ a:hover{
     /* TRANSITION EFFECT COPIED FROM BOOTSTRAP */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-
-/* .btn-link {
-    display: block;
-} */
 
 .game-container{
     width: 80%;
@@ -50,20 +41,25 @@ a:hover{
 }
 
 .option-btn {
-    /* display: inline-block; */
     margin: 20px auto;
+}
+
+.difficulty-btn {
+    margin-bottom: 20px;
+}
+
+.option-btn, .difficulty-btn {
     border-radius: 15px;
     text-align: center;
     font-family: Bungee;
     box-shadow: 4px 5px 1px #000000bf;
     border: none;
     color: #fff;
-    /* padding: 10px; */
     min-width: 175px;
 }
 
 .main-menu-link {
-    /* margin: 20px 0; */
+    margin: 20px 0 30px;
 } 
 
 .main-menu-link a {    
@@ -72,6 +68,7 @@ a:hover{
     color: #000;
     font-size: 0.8rem;
     padding: 0 10px;
+    box-shadow: 2px 3px 1px #000000bf;
 }
 
 .main-menu-link a:hover{
@@ -114,15 +111,12 @@ a:hover{
 }
 
 /*----------------------------------------------------DIFFICULTY.HTML--*/
-.difficulty-container h2{
+.select-difficulty{
     font-family: Bungee;
     font-size: 1.5rem;
-    /* margin-top: 10px; */
+    margin: 20px auto;
 }
-
-.difficulty-container p {
-    /* margin: 0;
-    padding: 0 20px 10px; */
+.difficulty-description{
     font-weight: bold;
 }
 
@@ -155,12 +149,18 @@ a:hover{
     .logo {
         font-size: 2.3rem;
     }
+    .select-difficulty {
+        font-size: 2rem
+    }
+    .difficulty-btn {
+        font-size: 1.5rem;
+    }
+    .difficulty-description{
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 768px) {
-    /* .game-container {
-        width: 640px;
-    } */
     .main-menu-link a{
         font-size: 1rem;
     }
@@ -183,11 +183,11 @@ a:hover{
         font-size: 1.5rem;
         padding: 10px;
     }
-    .difficulty-container h2{
-        font-size: 2rem;
+    .select-difficulty {
+        font-size: 2.5rem;
     }
-    .difficulty-container p {
-        font-size: 1.6rem;
+    .difficulty-description{
+        font-size: 1.5rem;
     }
 }
 

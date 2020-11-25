@@ -16,19 +16,38 @@
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<body>
-    <div class="game-container game-yellow">
-        <div class="difficulty-container">
-            <h2>Select Difficulty:</h2>
-            <a href="game.html"><button class="btn btn-green option-btn">Easy</button></a>
-            <p>Time between beeps is nice and slow.<br>Remember 15 beeps to win</p>
-            <a href="game.html"><button class="btn btn-orange option-btn">Normal</button></a>
-            <p>Time between beeps is moderately fast.<br>Remember 20 beeps to win</p>
-            <a href="game.html"><button class="btn btn-red option-btn">Hard</button></a>
-            <p>Time between beeps is fast.<br>Remember 25 beeps to win</p>
+<body class="d-flex align-items-center">
+    <div class="container-fluid game-container game-yellow">
+        <div class="row d-flex text-center">
+            <div class="col">
+                <h2 class="select-difficulty">Select Difficulty:</h2>
+            </div>
         </div>
-        <div class="main-menu-link"><a href="index.html">Back to main menu</a></div>
-    </div>    
+        <div class="row text-center">
+            <div class="col">
+                <a href="game.html"><button class="btn btn-green difficulty-btn">Easy</button></a>
+                <p class="difficulty-description">Time between beeps is nice and slow. Remember 15 beeps to win</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <a href="game.html"><button class="btn btn-orange difficulty-btn">Normal</button></a>
+                <p class="difficulty-description">Time between beeps is moderately fast. Remember 20 beeps to win</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <a href="game.html"><button class="btn btn-red difficulty-btn">Hard</button></a>
+                <p class="difficulty-description">Time between beeps is fast. Remember 25 beeps to win</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col main-menu-link">
+                <a href="index.html"><button class="btn">Back to main menu</button></a>
+            </div>
+        </div>
+    </div>
+  
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" 

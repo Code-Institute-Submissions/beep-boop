@@ -7,6 +7,11 @@ body {
     align-items: center;
 }
 
+p {
+    font-family: 'DM mono';
+    text-align: center;
+}
+
 a {
     color: #fff;
 }
@@ -46,6 +51,24 @@ a:hover{
     padding: 10px;
     min-width: 175px;
 }
+.main-menu-link a {    
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Bungee;
+    background-color: #FFF7B0;
+    border-radius: 15px;
+    color:#000;
+    padding: 5px;
+}
+
+.main-menu-link a:hover{
+    background-color: #09AEAE;
+    color: #fff;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
 /*----------------------------------------------------INDEX.HTML--*/
 #welcome-to{
     font-family: bungee;
@@ -78,13 +101,16 @@ a:hover{
     text-align: center;
 }
 
-.how-to-play p {
-    font-family: 'DM mono';
-    text-align: center;
+/*----------------------------------------------------DIFFICULTY.HTML--*/
+.difficulty-container h2{
+    font-family: Bungee;
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
-/*----------------------------------------------------DIFFICULTY.HTML--*/
-
+.difficulty-container p {
+    padding: 0 20px;
+}
 
 /*----------------------------------------------------COLORS--*/
 .game-yellow {
@@ -94,11 +120,17 @@ a:hover{
 .btn-blue {
     background-color: #09AEAE;
 }
+
 .btn-red {
     background-color: #CF1736;
 }
+
 .btn-green {
     background-color: #26A612;
+}
+
+.btn-orange {
+    background-color: #C3750F;
 }
 .modal-bg {
     background-color: #392092bf;
@@ -114,6 +146,10 @@ a:hover{
 @media (min-width: 768px) {
     .game-container {
         width: 640px;
+    }
+    .main-menu-link a{
+        font-size: 1.5rem;
+        padding: 10px;
     }
     .logo {
         padding: 0 15px 5px 15px;
@@ -134,10 +170,15 @@ a:hover{
     .how-to-play h4 {
         font-size: 2.8rem;
     }
-
     .how-to-play p {
         font-size: 1.5rem;
         padding: 10px;
+    }
+    .difficulty-container h2{
+        font-size: 3rem;
+    }
+    .difficulty-container p {
+        font-size: 1.6rem;
     }
 }
 
@@ -151,7 +192,6 @@ a:hover{
         letter-spacing: 10px;
         margin: 20px;
     }
-
     .logo {
         padding: 0 25px 5px 25px;
         font-size: 6rem;
@@ -160,6 +200,9 @@ a:hover{
     .option-btn {
         font-size: 2.2rem;
         width: 400px;
+    }
+    .difficulty-container .option-btn{
+        margin: 25px auto;
     }
 }
 
@@ -170,4 +213,7 @@ a:hover{
     .tagline {
         font-size: 1.8rem;
         margin: 30px 0
+    }
+    .difficulty-container .option-btn {
+        margin: 40px auto;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,34 @@
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<body>
-
-
-
+<body class="d-flex align-items-center h-100">
+    <div class="container-fluid game-container game-yellow">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="logo">Beep - Boop</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                    <button class="btn btn-blue option-btn" data-toggle="modal" data-target="#how-to-play-modal">How to play</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a class="btn-link" href="difficulty.html"><button class="btn btn-red option-btn">Play on mute</button></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a class="btn-link" href="difficulty.html"><button class="btn btn-green option-btn">Play with audio</button></a>
+                        <p id="recommended">Highly recommended</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" 

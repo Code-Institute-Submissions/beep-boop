@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'digital-7regular';
+    src: 
+        url('../fonts/digital-7.ttf') format('ttf'),
+        url('../fonts/digital-7-webfont.woff2') format('woff2'),
+        url('../fonts/digital-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*----------------------------------------------------SHARED STYLES--*/
 body {
     background-image: url("../images/background.jpg");
@@ -142,6 +153,7 @@ a:hover{
 
 .level-screen {
     background-color: #CECECE;
+    font-family: digital-7regular;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     height: 20%;
@@ -213,6 +225,9 @@ a:hover{
         height: 55px;
         width: 80px;
         font-size: 1rem;
+    }
+    .level-screen {
+        font-size: 1.5rem;
     } 
 }
 
@@ -247,6 +262,9 @@ a:hover{
     }
     .difficulty-description{
         font-size: 1.5rem;
+    }
+    .level-screen {
+        font-size: 2rem;
     }
 }
 

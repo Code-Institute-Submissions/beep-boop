@@ -45,13 +45,15 @@ a:hover{
     width: 100%;
     padding: 0 5px 5px 5px;
 }
-
-.option-btn {
-    margin: 20px auto;
-}
-
-.difficulty-btn {
-    margin-bottom: 20px;
+.menu-link {    
+    background-color: #FFF7B0;
+    width: 70px;
+    height: 42px;
+    border-radius: 15px;
+    color: #000;
+    font-size: 0.8rem;
+    padding: 0 10px;
+    box-shadow: 2px 3px 1px #000000bf;
 }
 
 .option-btn, .difficulty-btn {
@@ -64,23 +66,12 @@ a:hover{
     min-width: 175px;
 }
 
-/* .main-menu-link {
-    margin: 20px 0 30px;
-}  */
-
-.main-menu-link {    
-    background-color: #FFF7B0;
-    border-radius: 15px;
-    color: #000;
-    font-size: 0.8rem;
-    padding: 0 10px;
-    box-shadow: 2px 3px 1px #000000bf;
+.option-btn {
+    margin: 20px auto;
 }
 
-.main-menu-link:hover{
-    background-color: #09AEAE;
-    color: #fff;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.difficulty-btn {
+    margin-bottom: 20px;
 }
 
 /*----------------------------------------------------INDEX.HTML--*/
@@ -94,7 +85,6 @@ a:hover{
 .tagline {
     font-family: 'Bungee Shade';
     font-size: 0.8rem;
-    /* margin-top: 20px; */
 }
 
 #recommended {
@@ -104,7 +94,6 @@ a:hover{
     position: relative;
     bottom: 15px;
 }
-}
 
 .modal-container {
     background-color: #FFF7B0;
@@ -113,7 +102,6 @@ a:hover{
 .how-to-play h4 {
     font-family: Bungee;
     font-size: 2rem;
-    /* text-align: center; */
 }
 
 /*----------------------------------------------------DIFFICULTY.HTML--*/
@@ -122,9 +110,20 @@ a:hover{
     font-size: 1.5rem;
     margin: 20px auto;
 }
+
 .difficulty-description{
     font-weight: bold;
 }
+#diff-menu-link {
+    margin: 20px 0 30px;
+}
+
+.menu-link:hover{
+    background-color: #09AEAE;
+    color: #fff;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 
 /*----------------------------------------------------GAME.HTML--*/
 .game-btn {
@@ -135,13 +134,9 @@ a:hover{
 
 }
 
-.game-container .main-menu-link a {    
-    background-color: #FFF7B0;
-    border-radius: 15px;
-    color: #000;
-    font-size: 0.2rem;
-    padding: 0 10px;
-    box-shadow: 2px 3px 1px #000000bf;
+#game-menu-link {
+    margin: 0;
+
 }
 
 .level-screen {
@@ -149,6 +144,21 @@ a:hover{
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     height: 20%;
+}
+
+.start-btn {
+    color: #fff;
+    font-family: Bungee;
+    background-color: #771BBF;
+    min-width: 70px;
+    min-height: 42px;
+    border-radius: 15px;
+    box-shadow: 4px 5px 1px #000000bf;
+
+}
+
+.btn-row {
+    margin-top: 5px;
 }
 
 /*----------------------------------------------------COLORS--*/
@@ -189,6 +199,20 @@ a:hover{
     .difficulty-description{
         font-size: 1.2rem;
     }
+    .game-container {
+    height: 400px;
+    }
+    #game-menu-link {
+    margin: 0;  
+    }
+    .btn-row {
+    margin-top: 25px;
+    }
+    .start-btn, #game-menu-link {
+        height: 55px;
+        width: 80px;
+        font-size: 1rem;
+    } 
 }
 
 @media (min-width: 768px) {

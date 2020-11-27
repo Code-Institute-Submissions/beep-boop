@@ -53,7 +53,7 @@ hard.click(function(){;
     });
 
 //Game button handlers
-startBtn.click(play);
+startBtn.click(startGame);
 redBtn.click(red);
 greenBtn.click(green);
 orangeBtn.click(orange);
@@ -62,7 +62,7 @@ blueBtn.click(blue);
     
 //GAME FUNCTIONS
 //Start of new game
-function play(){
+function startGame(){
 
     compOrder = [];
     userOrder = [];
@@ -135,22 +135,32 @@ function avOutputs(btnVar, btnColorString , audioSample){
 
 //Trigger AV and push number to userOrder array
 function red(){
+    if(userTurn === true){
     userOrder.push(1);
     avOutputs(redBtn, "btn-red", redAudio);
+    }
 }
 
 function green(){
+    if(userTurn === true){
     userOrder.push(2);
     avOutputs(greenBtn, "btn-green", greenAudio);
+    }
 }
 
 function orange(){
+    if(userTurn === true){
     userOrder.push(3);
     avOutputs(orangeBtn, "btn-orange", orangeAudio);
+    }
 }
 
 function blue(){
+    if(userTurn === true){
     userOrder.push(4);
     avOutputs(blueBtn, "btn-blue", blueAudio);
+    }
 }
+
+
 

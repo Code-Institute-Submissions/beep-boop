@@ -30,7 +30,8 @@ let speed;
 let winLimit;
 let intervalID;
 
-//SET SESSION STORAGE 
+//USER CLICK HANDLERS
+//Set session storage 
 withAudio.click(function(){
     sessionStorage.setItem("audio", "true");
     });
@@ -50,11 +51,19 @@ normal.click(function(){
 hard.click(function(){;
     sessionStorage.setItem("difficulty", "hard");
     });
+
+//Game button handlers
+startBtn.click(play);
+redBtn.click(red);
+greenBtn.click(green);
+orangeBtn.click(orange);
+blueBtn.click(blue);
+
     
 //GAME FUNCTIONS
 //Start of new game
 function play(){
-    debugger;
+
     compOrder = [];
     userOrder = [];
     userTurn = false;
@@ -99,18 +108,19 @@ function compPlay(){
             avOutputs(redBtn, "btn-red", redAudio);
         };
         if(compOrder[compCount] === 2){
-            avOutputs(greenBtn, "btn-red", greenAudio);
+            avOutputs(greenBtn, "btn-green", greenAudio);
         };
         if(compOrder[compCount] === 3){
-            avOutputs(orangeBtn, "btn-red", orangeAudio);
+            avOutputs(orangeBtn, "btn-orange", orangeAudio);
         };
         if(compOrder[compCount] === 4){
-            avOutputs(blueBtn, "btn-red", blueAudio);
+            avOutputs(blueBtn, "btn-blue", blueAudio);
         };
         compCount++;
     };
 };
 
+//Trigger appropriate CSS classes and audio files
 function avOutputs(btnVar, btnColorString , audioSample){
     btnVar.removeClass(btnColorString).addClass(btnColorString + "-active");
     setTimeout(function(){
@@ -122,3 +132,25 @@ function avOutputs(btnVar, btnColorString , audioSample){
     };
 
 };
+
+//Trigger AV and push number to userOrder array
+function red(){
+    userOrder.push(1);
+    avOutputs(redBtn, "btn-red", redAudio);
+}
+
+function green(){
+    userOrder.push(2);
+    avOutputs(greenBtn, "btn-green", greenAudio);
+}
+
+function orange(){
+    userOrder.push(3);
+    avOutputs(orangeBtn, "btn-orange", orangeAudio);
+}
+
+function blue(){
+    userOrder.push(4);
+    avOutputs(blueBtn, "btn-blue", blueAudio);
+}
+

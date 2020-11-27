@@ -23,6 +23,7 @@ let compOrder = [];
 let userOrder = [];
 let userTurn = false;
 let compCount = 0;
+let userCount = 0;
 let level = 1;
 let difficulty = sessionStorage.difficulty;
 let audio;
@@ -94,8 +95,8 @@ function startGame(){
 
 //Computers turn
 function compPlay(){
+
     userTurn = false;
-    userOrder = [];
 
     if(compCount === level){
         compCount = 0;
@@ -135,60 +136,76 @@ function avOutputs(btnVar, btnColorString , audioSample){
 
 //Trigger AV and push number to userOrder array
 function red(){
+
     if(userTurn === true){
     userOrder.push(1);
     avOutputs(redBtn, "btn-red", redAudio);
+    userCount++;
     checkOrder();
     };
 };
 
 function green(){
+
     if(userTurn === true){
     userOrder.push(2);
     avOutputs(greenBtn, "btn-green", greenAudio);
+    userCount++;
     checkOrder();
     };
 };
 
 function orange(){
+
     if(userTurn === true){
     userOrder.push(3);
     avOutputs(orangeBtn, "btn-orange", orangeAudio);
+    userCount++;
     checkOrder();
     };
 };
 
 function blue(){
+
     if(userTurn === true){
     userOrder.push(4);
     avOutputs(blueBtn, "btn-blue", blueAudio);
+    userCount++;
     checkOrder();
     };
 };
 
 function checkOrder(){
+    if(userOrder[userCount - 1] !== compOrder[userCount - 1]){
+        loseGame();
+    }
     if(userOrder.length === level){
         userTurn = false;
 
+        if(userOrder[level -1] !== compOrder[level -1]){
+        loseGame();
+        }
         if(userOrder[level - 1] === compOrder[level - 1] && level < winLimit){
             userTurn = false;
             level++;
+            userOrder = [];
+            userCount = 0;
             levelDisplay.text(`LEVEL : ${level}`)
             intervalID = setInterval(compPlay, speed);
-        }else if(userOrder[level - 1] === compOrder[level - 1] && level === winLimit){
-            winner();
-        }else{
-            loser();
-        };
-
-        };
+        }
+        if(userOrder[level - 1] === compOrder[level - 1] && level === winLimit){
+            winGame();
+        }
     };
+};
 
-let winner = () => {
+let winGame = () => {
+    userTurn = false;
     console.log("WIN")
 }
 
-let loser = () => {
+let loseGame = () => {
+    userTurn = false;
     console.log("LOSE")
 }
 

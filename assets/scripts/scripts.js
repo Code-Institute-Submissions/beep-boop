@@ -29,6 +29,7 @@ let audio;
 let speed;
 let winLimit;
 let intervalID;
+let levelDisplay = $("#level");
 
 //USER CLICK HANDLERS
 //Set session storage 
@@ -63,7 +64,7 @@ blueBtn.click(blue);
 //GAME FUNCTIONS
 //Start of new game
 function startGame(){
-
+    levelDisplay.text("LEVEL : 1");
     compOrder = [];
     userOrder = [];
     userTurn = false;
@@ -172,6 +173,7 @@ function checkOrder(){
         if(userOrder[level - 1] === compOrder[level - 1] && level < winLimit){
             userTurn = false;
             level++;
+            levelDisplay.text(`LEVEL : ${level}`)
             intervalID = setInterval(compPlay, speed);
         }else if(userOrder[level - 1] === compOrder[level - 1] && level === winLimit){
             winner();

@@ -204,6 +204,43 @@ a:hover{
 .modal-bg {
     background-color: #392092bf;
 }
+/*--------------------------------------ACTIVE BUTTON COLORS--*/
+.btn-red-active {
+    position: relative;
+    top: 4px;
+    background: radial-gradient(circle, #ff8a8a 10%, #ff4f6c 100%);
+    -webkit-box-shadow: 0px 0px 11px 8px #ff4f6c;
+    -moz-box-shadow: 0px 0px 11px 8px #ff4f6c;
+    box-shadow: 0px 0px 11px 8px #ff4f6c;
+}
+
+.btn-green-active {
+    position: relative;
+    top: 4px;
+    background: radial-gradient(circle, #acff92 0%, #3bf71e 100%);
+    -webkit-box-shadow: 0px 0px 11px 8px #3bf71e;
+    -moz-box-shadow: 0px 0px 11px 8px #3bf71e;
+    box-shadow: 0px 0px 11px 8px #3bf71e;
+}
+
+.btn-orange-active {
+    position: relative;
+    top: 4px;
+    background: radial-gradient(circle, #ffd5a4 0%, #ffae00 100%);
+    -webkit-box-shadow: 0px 0px 11px 8px #ff9012;
+    -moz-box-shadow: 0px 0px 11px 8px #ff9012;
+    box-shadow: 0px 0px 11px 8px #ff9012;
+}
+
+.btn-blue-active{
+    position: relative;
+    top: 4px;
+    background: radial-gradient(circle, #aeffff 0%, #00ffff 100%);
+    -webkit-box-shadow: 0px 0px 11px 8px #00ffff;
+    -moz-box-shadow: 0px 0px 11px 8px #00ffff;
+    box-shadow: 0px 0px 11px 8px #00ffff;
+
+}
 
 /*----------------------------------------------------MEDIA QUERIES--*/
  @media (min-width: 576px) { 

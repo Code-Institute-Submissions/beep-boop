@@ -12,6 +12,12 @@ const greenBtn = $("#green");
 const orangeBtn = $("#orange");
 const blueBtn = $("#blue");
 
+//AUDIO FILES
+const redAudio = new Audio("assets/audio/note-1.mp3");
+const greenAudio = new Audio("assets/audio/note-2.mp3");
+const orangeAudio = new Audio("assets/audio/note-3.mp3");
+const blueAudio = new Audio("assets/audio/note-4.mp3");
+
 //GAME VARIABLES
 let compOrder = [];
 let userOrder = [];
@@ -90,17 +96,29 @@ function compPlay(){
 
     if(!userTurn){
         if(compOrder[compCount] === 1){
-            //NEED TO WRITE LIGHTUP FUNCTION
+            avOutputs(redBtn, "btn-red", redAudio);
         };
         if(compOrder[compCount] === 2){
-            //NEED TO WRITE LIGHTUP FUNCTION
+            avOutputs(greenBtn, "btn-red", greenAudio);
         };
         if(compOrder[compCount] === 3){
-            //NEED TO WRITE LIGHTUP FUNCTION
+            avOutputs(orangeBtn, "btn-red", orangeAudio);
         };
         if(compOrder[compCount] === 4){
-            //NEED TO WRITE LIGHTUP FUNCTION
+            avOutputs(blueBtn, "btn-red", blueAudio);
         };
         compCount++;
-    }
-}
+    };
+};
+
+function avOutputs(btnVar, btnColorString , audioSample){
+    btnVar.removeClass(btnColorString).addClass(btnColorString + "-active");
+    setTimeout(function(){
+        btnVar.removeClass(btnColorString + "-active").addClass(btnColorString);
+    }, 200);
+
+    if(sessionStorage.audio === "true"){
+        audioSample.play();
+    };
+
+};

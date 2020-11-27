@@ -71,16 +71,16 @@ function startGame(){
     level = 1;
     if (difficulty === "easy"){
         speed = 800;
-        winLimit = 5;
+        winLimit = 15;
     } else if (difficulty === "normal"){
         speed = 600;
-        winLimit = 5;
+        winLimit = 20;
     } else if (difficulty === "hard"){
-        speed = 400;
-        winLimit = 5;
+        speed = 500;
+        winLimit = 25;
     } else {
         speed = 600;
-        winLimit = 5;
+        winLimit = 20;
     };
 
     //Get random array to decide computer order

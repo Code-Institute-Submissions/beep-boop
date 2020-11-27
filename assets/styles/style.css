@@ -111,10 +111,17 @@ a:hover{
     background-color: #FFF7B0;
     border-radius: 30px;
 }
+
 .how-to-play h4 {
     font-family: Bungee;
     font-size: 2rem;
 }
+
+#how-to-play-btn, #mute-btn {
+    position: relative;
+    bottom: 35px;
+}
+
 
 /*----------------------------------------------------DIFFICULTY.HTML--*/
 .select-difficulty{

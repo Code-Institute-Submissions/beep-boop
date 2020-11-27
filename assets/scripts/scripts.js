@@ -46,6 +46,7 @@ hard.click(function(){;
     });
     
 //GAME FUNCTIONS
+//Start of new game
 function play(){
     debugger;
     compOrder = [];
@@ -75,3 +76,31 @@ function play(){
 
     intervalID = setInterval(compPlay, speed);
 };
+
+//Computers turn
+function compPlay(){
+    userTurn = false;
+    userOrder = [];
+
+    if(compCount === level){
+        compCount = 0;
+        clearInterval(intervalID);
+        userTurn = true;
+    };
+
+    if(!userTurn){
+        if(compOrder[compCount] === 1){
+            //NEED TO WRITE LIGHTUP FUNCTION
+        };
+        if(compOrder[compCount] === 2){
+            //NEED TO WRITE LIGHTUP FUNCTION
+        };
+        if(compOrder[compCount] === 3){
+            //NEED TO WRITE LIGHTUP FUNCTION
+        };
+        if(compOrder[compCount] === 4){
+            //NEED TO WRITE LIGHTUP FUNCTION
+        };
+        compCount++;
+    }
+}

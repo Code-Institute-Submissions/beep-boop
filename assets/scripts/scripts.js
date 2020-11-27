@@ -69,20 +69,19 @@ function startGame(){
     userTurn = false;
     compCount = 0;
     level = 1;
-
     if (difficulty === "easy"){
         speed = 800;
-        winLimit = 15;
+        winLimit = 5;
     } else if (difficulty === "normal"){
         speed = 600;
-        winLimit = 20;
+        winLimit = 5;
     } else if (difficulty === "hard"){
         speed = 400;
-        winLimit = 25;
+        winLimit = 5;
     } else {
         speed = 600;
-        winLimit = 20;
-    }
+        winLimit = 5;
+    };
 
     //Get random array to decide computer order
     for (let i = 0; i < winLimit; i++){
@@ -138,29 +137,56 @@ function red(){
     if(userTurn === true){
     userOrder.push(1);
     avOutputs(redBtn, "btn-red", redAudio);
-    }
-}
+    checkOrder();
+    };
+};
 
 function green(){
     if(userTurn === true){
     userOrder.push(2);
     avOutputs(greenBtn, "btn-green", greenAudio);
-    }
-}
+    checkOrder();
+    };
+};
 
 function orange(){
     if(userTurn === true){
     userOrder.push(3);
     avOutputs(orangeBtn, "btn-orange", orangeAudio);
-    }
-}
+    checkOrder();
+    };
+};
 
 function blue(){
     if(userTurn === true){
     userOrder.push(4);
     avOutputs(blueBtn, "btn-blue", blueAudio);
-    }
+    checkOrder();
+    };
+};
+
+function checkOrder(){
+    if(userOrder.length === level){
+        userTurn = false;
+
+        if(userOrder[level - 1] === compOrder[level - 1] && level < winLimit){
+            userTurn = false;
+            level++;
+            intervalID = setInterval(compPlay, speed);
+        }else if(userOrder[level - 1] === compOrder[level - 1] && level === winLimit){
+            winner();
+        }else{
+            loser();
+        };
+
+        };
+    };
+
+let winner = () => {
+    console.log("WIN")
 }
 
-
+let loser = () => {
+    console.log("LOSE")
+}
 

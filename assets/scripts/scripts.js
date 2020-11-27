@@ -19,6 +19,9 @@ let userTurn = false;
 let compCount = 0;
 let level = 1;
 let difficulty = sessionStorage.difficulty;
+let audio;
+let speed;
+let winLimit;
 let intervalID;
 
 //SET SESSION STORAGE 
@@ -38,8 +41,37 @@ normal.click(function(){
     sessionStorage.setItem("difficulty", "normal");
     });
     
-hard.click(function(){
+hard.click(function(){;
     sessionStorage.setItem("difficulty", "hard");
     });
     
+//GAME FUNCTIONS
+function play(){
+    debugger;
+    compOrder = [];
+    userOrder = [];
+    userTurn = false;
+    compCount = 0;
+    level = 1;
 
+    if (difficulty === "easy"){
+        speed = 800;
+        winLimit = 15;
+    } else if (difficulty === "normal"){
+        speed = 600;
+        winLimit = 20;
+    } else if (difficulty === "hard"){
+        speed = 400;
+        winLimit = 25;
+    } else {
+        speed = 600;
+        winLimit = 20;
+    }
+
+    //Get random array to decide computer order
+    for (let i = 0; i < winLimit; i++){
+        compOrder.push(Math.floor(Math.random()* 4 + 1));
+    };
+
+    intervalID = setInterval(compPlay, speed);
+};

@@ -15,12 +15,13 @@ body {
 }
 
 p {
-    font-family: 'DM mono';
+    font-family: 'DM mono', "Lucida Console", monospace;
 }
 
 a {
     color: #fff;
-    font-family: Bungee;
+    font-family: Bungee,Impact, sans-serif;
+    text-transform: uppercase;
 }
 
 a:hover{
@@ -50,7 +51,8 @@ a:hover{
 }
 
 .logo {
-    font-family: 'Faster One';
+    font-family: 'Faster One', Impact, sans-serif;
+    text-transform: uppercase;
     font-size: 2.3rem;
     border: 5px solid #000;
     border-radius: 30px;
@@ -71,7 +73,8 @@ a:hover{
 .option-btn, .difficulty-btn {
     border-radius: 15px;
     text-align: center;
-    font-family: Bungee;
+    font-family: Bungee, Impact, sans-serif;
+    text-transform: uppercase;
     box-shadow: 4px 5px 1px #000000bf;
     border: none;
     color: #fff;
@@ -88,19 +91,19 @@ a:hover{
 
 /*----------------------------------------------------INDEX.HTML--*/
 #welcome-to{
-    font-family: bungee;
+    font-family: bungee, Impact, sans-serif;;
     font-size: 1.2rem;
     letter-spacing: 5px;
     margin-top: 10px;
 }
 
 .tagline {
-    font-family: 'Bungee Shade';
+    font-family: 'Bungee Shade' "Lucida Console", monospace;
     font-size: 0.8rem;
 }
 
 #recommended {
-    font-family: Bungee;
+    font-family: Bungee, Impact, sans-serif;;
     font-size: 0.7rem;
     display: block;
     position: relative;
@@ -113,7 +116,7 @@ a:hover{
 }
 
 .how-to-play h4 {
-    font-family: Bungee;
+    font-family: Bungee, Impact, sans-serif;;
     font-size: 2rem;
 }
 
@@ -125,7 +128,7 @@ a:hover{
 
 /*----------------------------------------------------DIFFICULTY.HTML--*/
 .select-difficulty{
-    font-family: Bungee;
+    font-family: Bungee, Impact, sans-serif;;
     font-size: 1.5rem;
     margin: 20px auto;
 }
@@ -160,7 +163,7 @@ a:hover{
 
 .level-screen {
     background-color: #CECECE;
-    font-family: digital-7regular;
+    font-family: digital-7regular, "Courier New", Courier, monospace;
     text-transform: uppercase;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 0;
@@ -170,7 +173,7 @@ a:hover{
 
 .start-btn {
     color: #fff;
-    font-family: Bungee;
+    font-family: Bungee, Impact, sans-serif;
     font-size: 0.9rem;
     background-color: #771BBF;
     min-width: 70px;

@@ -190,8 +190,10 @@ function checkOrder(){
             level++;
             userOrder = [];
             userCount = 0;
+            setTimeout(function(){
             levelDisplay.text(`LEVEL : ${level}`)
             intervalID = setInterval(compPlay, speed);
+            }, 1000);
         }
         if(userOrder[level - 1] === compOrder[level - 1] && level === winLimit){
             winGame();
@@ -201,11 +203,13 @@ function checkOrder(){
 
 let winGame = () => {
     userTurn = false;
+    levelDisplay.text("Winner!")
     console.log("WIN")
 }
 
 let loseGame = () => {
     userTurn = false;
+    levelDisplay.text("Game over!")
     console.log("LOSE")
 }
 

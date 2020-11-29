@@ -41,9 +41,9 @@ a:hover{
     -moz-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
     box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
 }
-.general-container {
-    min-height: 360px;
-}
+/* .general-container {
+    /* min-height: 360px; */
+} */
 
 .game-container {
     height: 320px;
@@ -53,7 +53,7 @@ a:hover{
 .logo {
     font-family: 'Faster One', Impact, sans-serif;
     text-transform: uppercase;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     border: 5px solid #000;
     border-radius: 30px;
     width: 100%;
@@ -98,7 +98,7 @@ a:hover{
 }
 
 .tagline {
-    font-family: 'Bungee Shade' "Lucida Console", monospace;
+    font-family: 'Bungee Shade', "Lucida Console", monospace;
     font-size: 0.8rem;
 }
 
@@ -340,3 +340,50 @@ a:hover{
         font-size: 1.8rem;
     }
 } 
+
+/*----------------------MAX-HEIGHT QUERY TO FIX LANDSCAPE PHONE BUGS--*/
+@media (max-height: 400px){
+    .general-container {
+        height: 280px;
+        width: 400px;
+    }
+    #welcome-to{
+        font-size: 0.9rem;
+        margin: 5px 0 0 0;
+    }
+    .logo {
+        margin-top: 5px;
+        font-size: 1.8rem;
+    }
+    .tagline{
+        margin: 0;
+    }
+    .option-btn {
+        margin-top: 8px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-height: 600px){
+    .general-container {
+        height: 280px;
+        width: 400px;
+    }
+    #welcome-to{
+        font-size: 0.9rem;
+        margin: 5px 0 0 0;
+    }
+    .logo {
+        margin-top: 5px;
+        font-size: 1.8rem;
+    }
+    .tagline{
+        margin: 0;
+        font-size: 0.6rem;
+    }
+    .option-btn {
+        margin-top: 8px;
+        font-size: 0.8rem;
+    }
+
+}

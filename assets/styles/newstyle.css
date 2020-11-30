@@ -1,14 +1,5 @@
-* {
-    box-sizing: border-box;
-}
-
-/* CUSTOM SPACERS */
-.h-33 {
-    height: 33%;
-}
-
-.h-22 {
-    height: 22%;
+body {
+    background-image: url("../images/background.jpg");
 }
 
 .general-container {
@@ -24,20 +15,6 @@
     box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
 }
 
-#welcome-to{
-    font-family: bungee, Impact, sans-serif;;
-    font-size: 0.8rem;
-    letter-spacing: 5px;
-    margin-top: 5px;
-}
-#recommended {
-    font-family: Bungee, Impact, sans-serif;;
-    font-size: 0.7rem;
-    position: relative;
-    top: 5px;
-}
-
-
 .logo {
     font-family: 'Faster One', Impact, sans-serif;
     text-transform: uppercase;
@@ -47,13 +24,6 @@
     width: 100%;
     margin-bottom: 4px;
 }
-
-.tagline {
-    font-family: 'Bungee Shade', "Lucida Console", monospace;
-    font-size: 0.7rem;
-}
-
-
 
 .option-btn, .difficulty-btn {
     border-radius: 15px;
@@ -66,11 +36,57 @@
     min-width: 175px;
 }
 
+.menu-link {    
+    background-color: #FFF7B0;
+    color: #000;
+    font-family: Bungee, Impact, sans-serif;
+    text-transform: uppercase;
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 0.6rem;
+    box-shadow: 2px 3px 1px #000000bf;
+}
+/*-------------------------------------------------INDEX.HTML--*/
+.tagline {
+    font-family: 'Bungee Shade', "Lucida Console", monospace;
+    font-size: 0.7rem;
+}
 
+#welcome-to{
+    font-family: bungee, Impact, sans-serif;;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
 
+#recommended {
+    font-family: Bungee, Impact, sans-serif;;
+    font-size: 0.7rem;
+    position: relative;
+    top: 5px;
+}
 
+/*--------------------------------------------DIFFICULTY.HTML--*/
+.select-difficulty{
+    font-family: Bungee, Impact, sans-serif;
+    font-size: 1rem;
+    margin: 5px auto;
+}
 
+.difficulty-btn {
+    font-size: 0.6rem;
+ }
 
+.difficulty-description{
+    font-size: 0.6rem;
+    font-weight: bold;
+    font-family: 'DM mono', "Lucida Console", monospace;
+    margin-top: 5px;
+}
+
+/*----------------------------------------------------COLORS--*/
 .game-yellow {
     background-color: #FFE922;
 }
@@ -93,10 +109,28 @@
 .modal-bg {
     background-color: #392092bf;
 }
+/*--------------------------------------------CUSTOM SPACERS--*/
+.h-22 {
+    height: 22%;
+}
 
-@media (min-height: 640px){
+.h-30 {
+    height: 30%;
+}
+
+.h-33 {
+    height: 33%;
+}
+
+/*---------------------------------------------MEDIA QUERIES--*/
+@media (min-width: 440px){
+    .general-container {
+        max-width: 340px;
+    }
+}
+@media (min-height: 640px) and (min-width: 440px){
     .general-container{
-        width: 550px;
+        max-width: 550px;
     }
     #welcome-to {
     font-size: 1rem;
@@ -106,14 +140,21 @@
         font-size: 0.7rem;
         top: 5px;
     }
-
-
     .logo {
         font-size: 1.6rem;
 
     }
     .tagline {
-    font-size: 0.8rem;
+        font-size: 0.8rem;
+    }
+    .select-difficulty {
+        margin: 10px 0;
+    }
+    .difficulty-btn {
+        font-size: 0.8rem;
+ }
+    .difficulty-description {
+        font-size: 0.9rem;
     }
 }
 @media (min-height: 800px){
@@ -134,24 +175,22 @@
     .tagline {
         font-size: 1rem;
     }
-    .option-btn {
+    .option-btn, .difficulty-btn {
         font-size: 1.1rem;
         width: 220px;
     }
-}
-
-@media (min-height: 800px) and (min-width:400){
-    .logo {
-        font-size: 2rem;
-
+    .select-difficulty {
+        font-size: 1.4rem;
     }
-    .tagline {
+    .difficulty-description {
+        font-size: 0.8rem;
+    }
+    .menu-link {
         font-size: 1rem;
+        width: 80px;
+        height: 50px;
     }
-    .option-btn {
-        font-size: 1.1rem;
-    }
-}
+} 
 
 @media (min-height: 750px) and (min-width: 576px) {
     .general-container {
@@ -162,16 +201,27 @@
         margin: 10px 0;
     }
    .logo {
-        font-size: 3rem;
+        font-size: 4rem;
         margin: 10px 0;
     }
     .tagline {
         font-size: 1.2rem;
         margin: 15px;
     }
-    .option-btn {
+    .option-btn, .difficulty-btn {
         font-size: 1.6rem;
         width: 280px;
+    }
+    .select-difficulty {
+        font-size: 1.8rem;
+    }
+    .difficulty-description {
+        font-size: 1.4rem;
+    }
+    .menu-link {
+        font-size: 1.2rem;
+        width: 100px;
+        height: 60px;
     }
 }
 
@@ -179,19 +229,19 @@
     .general-container {
         min-height: 600px;
     }
-       #welcome-to{
+    #welcome-to{
         font-size: 1.4rem;
         margin: 10px 0;
     }
    .logo {
-        font-size: 3rem;
+        font-size: 4rem;
         margin: 10px 0;
     }
     .tagline {
         font-size: 1.2rem;
         margin: 15px;
     }
-    .option-btn {
+    .option-btn, .difficulty-btn {
         font-size: 1.6rem;
         width: 280px;
     }
@@ -204,7 +254,7 @@
     .tagline {
         font-size: 1.4rem;
     }
-    .option-btn {
+    .option-btn, .difficulty-btn {
         font-size: 1.5rem;
         width: 280px;
     }
@@ -226,9 +276,9 @@
     }
     .tagline {
         margin: 10px 0;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
-    .option-btn {
+    .option-btn, .difficulty-btn {
         margin-top: 15px;
         font-size: 1.8rem;
         width: 320px;

@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'digital-7regular';
+    src: 
+        url('../fonts/digital-7.ttf') format('ttf'),
+        url('../fonts/digital-7-webfont.woff2') format('woff2'),
+        url('../fonts/digital-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*-------------------------------------------------SHARED STYLES--*/
+
 body {
     background-image: url("../images/background.jpg");
 }
@@ -83,6 +96,51 @@ body {
     font-size: 0.6rem;
     font-weight: bold;
     font-family: 'DM mono', "Lucida Console", monospace;
+    margin-top: 5px;
+}
+
+/*--------------------------------------------------GAME.HTML--*/
+.game-btn {
+    border-radius: 15px;
+    width: 85%;
+    height: 90%;
+    box-shadow: 4px 5px 1px #000000bf;
+
+}
+
+#game-menu-link {
+    position: relative;
+    right:5px;
+    font-size: 0.5rem;
+    width: 60px;
+
+}
+
+.level-screen {
+    background-color: #CECECE;
+    font-family: digital-7regular, "Courier New", Courier, monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    border-radius: 15px;
+    height: 20%;
+}
+
+.start-btn {
+    color: #fff;
+    font-family: Bungee, Impact, sans-serif;
+    font-size: 0.5rem;
+    background-color: #771BBF;
+    min-width: 60px;
+    min-height: 30px;
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 4px 5px 1px #000000bf;
+
+}
+
+.btn-row {
     margin-top: 5px;
 }
 

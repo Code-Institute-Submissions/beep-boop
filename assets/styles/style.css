@@ -11,6 +11,17 @@
 body {
     background-image: url("../images/background.jpg");
 }
+button {
+    font-family: Bungee, Impact, sans-serif;
+    text-transform: uppercase;
+}
+.text {
+    font-family: 'DM mono', "Lucida Console", monospace;
+}
+.header {
+    font-family: Bungee, Impact, sans-serif;
+    text-transform: uppercase;
+}
 .general-container {
     height: 50%;
     min-height: 280px;
@@ -35,8 +46,6 @@ body {
 .option-btn, .difficulty-btn {
     border-radius: 15px;
     text-align: center;
-    font-family: Bungee, Impact, sans-serif;
-    text-transform: uppercase;
     box-shadow: 4px 5px 1px #000000bf;
     border: none;
     color: #fff;
@@ -45,8 +54,6 @@ body {
 .menu-link {    
     background-color: #FFF7B0;
     color: #000;
-    font-family: Bungee, Impact, sans-serif;
-    text-transform: uppercase;
     width: 70px;
     height: 30px;
     padding: 0;
@@ -67,20 +74,21 @@ body {
     font-size: 0.7rem;
 }
 #welcome-to {
-    font-family: Bungee, Impact, sans-serif;
     font-size: 0.8rem;
     letter-spacing: 5px;
     margin-top: 5px;
 }
 #recommended {
-    font-family: Bungee, Impact, sans-serif;
     font-size: 0.7rem;
     position: relative;
     top: 5px;
 }
+.modal-container {
+    background-color: #FFF7B0;
+    border-radius: 30px;
+}
 /*--------------------------------------------DIFFICULTY.HTML--*/
 .select-difficulty {
-    font-family: Bungee, Impact, sans-serif;
     font-size: 1rem;
     margin: 5px auto;
 }
@@ -90,7 +98,7 @@ body {
 .difficulty-description {
     font-size: 0.6rem;
     font-weight: bold;
-    font-family: 'DM mono', "Lucida Console", monospace;
+    
     margin-top: 5px;
 }
 /*--------------------------------------------------GAME.HTML--*/
@@ -120,7 +128,6 @@ body {
 }
 .start-btn {
     color: #fff;
-    font-family: Bungee, Impact, sans-serif;
     font-size: 0.5rem;
     background-color: #771BBF;
     min-width: 60px;

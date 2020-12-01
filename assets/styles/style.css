@@ -6,67 +6,32 @@
         url('../fonts/digital-7-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-/*----------------------------------------------------SHARED STYLES--*/
+/*-------------------------------------------------SHARED STYLES--*/
 body {
     background-image: url("../images/background.jpg");
 }
-
-p {
-    font-family: 'DM mono', "Lucida Console", monospace;
-}
-
-a {
-    color: #fff;
-    font-family: Bungee,Impact, sans-serif;
-    text-transform: uppercase;
-}
-
-a:hover{
-    color: #000;
-    text-decoration: none;
-    /* TRANSITION EFFECT COPIED FROM BOOTSTRAP */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.general-container, .game-container{
+.general-container {
+    height: 50%;
+    min-height: 280px;
+    max-height: 600px;
     width: 80%;
-    min-width: 300px;
-    max-width: 1000px; 
+    min-width: 260px;
+    max-width: 1000px;
     border-radius: 30px;
-    /* BOX SHADOW CREATED WITH www.cssmatic.com/ */
     -webkit-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
     box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
 }
-
-.game-container {
-    height: 320px;
-    max-width: 800px;
-}
-
 .logo {
     font-family: 'Faster One', Impact, sans-serif;
     text-transform: uppercase;
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     border: 5px solid #000;
     border-radius: 30px;
     width: 100%;
-    padding: 0 5px 5px 5px;
+    margin-bottom: 4px;
 }
-.menu-link {    
-    background-color: #FFF7B0;
-    width: 70px;
-    height: 42px;
-    border-radius: 15px;
-    color: #000;
-    font-size: 0.8rem;
-    padding: 0 10px;
-    box-shadow: 2px 3px 1px #000000bf;
-}
-
 .option-btn, .difficulty-btn {
     border-radius: 15px;
     text-align: center;
@@ -77,74 +42,58 @@ a:hover{
     color: #fff;
     min-width: 175px;
 }
-
-.option-btn {
-    margin: 20px auto;
+.menu-link {    
+    background-color: #FFF7B0;
+    color: #000;
+    font-family: Bungee, Impact, sans-serif;
+    text-transform: uppercase;
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 0.6rem;
+    box-shadow: 2px 3px 1px #000000bf;
 }
-
-.difficulty-btn {
-    margin-bottom: 20px;
+.menu-link:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #09AEAE;
+    /* TRANSITION EFFECT COPIED FROM BOOTSTRAP */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out;
 }
-
-/*----------------------------------------------------INDEX.HTML--*/
-#welcome-to{
-    font-family: bungee, Impact, sans-serif;;
-    font-size: 1.2rem;
-    letter-spacing: 5px;
-    margin-top: 10px;
-}
-
+/*-------------------------------------------------INDEX.HTML--*/
 .tagline {
     font-family: 'Bungee Shade', "Lucida Console", monospace;
-    font-size: 0.8rem;
-}
-
-#recommended {
-    font-family: Bungee, Impact, sans-serif;;
     font-size: 0.7rem;
-    display: block;
+}
+#welcome-to {
+    font-family: Bungee, Impact, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
+#recommended {
+    font-family: Bungee, Impact, sans-serif;
+    font-size: 0.7rem;
     position: relative;
-    bottom: 15px;
+    top: 5px;
 }
-
-.modal-container {
-    background-color: #FFF7B0;
-    border-radius: 30px;
+/*--------------------------------------------DIFFICULTY.HTML--*/
+.select-difficulty {
+    font-family: Bungee, Impact, sans-serif;
+    font-size: 1rem;
+    margin: 5px auto;
 }
-
-.how-to-play h4 {
-    font-family: Bungee, Impact, sans-serif;;
-    font-size: 2rem;
-}
-
-#how-to-play-btn, #mute-btn {
-    position: relative;
-    bottom: 35px;
-}
-
-
-/*----------------------------------------------------DIFFICULTY.HTML--*/
-.select-difficulty{
-    font-family: Bungee, Impact, sans-serif;;
-    font-size: 1.5rem;
-    margin: 20px auto;
-}
-
-.difficulty-description{
+.difficulty-btn {
+    font-size: 0.6rem;
+ }
+.difficulty-description {
+    font-size: 0.6rem;
     font-weight: bold;
+    font-family: 'DM mono', "Lucida Console", monospace;
+    margin-top: 5px;
 }
-#diff-menu-link {
-    margin: 20px 0 30px;
-}
-
-.menu-link:hover{
-    background-color: #09AEAE;
-    color: #fff;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-
-/*----------------------------------------------------GAME.HTML--*/
+/*--------------------------------------------------GAME.HTML--*/
 .game-btn {
     border-radius: 15px;
     width: 85%;
@@ -152,55 +101,51 @@ a:hover{
     box-shadow: 4px 5px 1px #000000bf;
 
 }
-
 #game-menu-link {
-    margin: 0;
+    position: relative;
+    right:5px;
+    font-size: 0.5rem;
+    width: 60px;
 
 }
-
 .level-screen {
     background-color: #CECECE;
     font-family: digital-7regular, "Courier New", Courier, monospace;
+    font-size: 0.6rem;
     text-transform: uppercase;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 0;
     border-radius: 15px;
     height: 20%;
 }
-
 .start-btn {
     color: #fff;
     font-family: Bungee, Impact, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     background-color: #771BBF;
-    min-width: 70px;
-    min-height: 42px;
+    min-width: 60px;
+    min-height: 30px;
+    padding: 0;
     border-radius: 15px;
     box-shadow: 4px 5px 1px #000000bf;
 
 }
-
 .btn-row {
     margin-top: 5px;
 }
-
 /*----------------------------------------------------COLORS--*/
 .game-yellow {
     background-color: #FFE922;
 }
-
 .btn-blue {
     background-color: #09AEAE;
 }
-
 .btn-red {
     background-color: #CF1736;
 }
-
 .btn-green {
     background-color: #26A612;
 }
-
 .btn-orange {
     background-color: #C3750F;
 }
@@ -216,7 +161,6 @@ a:hover{
     -moz-box-shadow: 0px 0px 11px 8px #ff4f6c;
     box-shadow: 0px 0px 11px 8px #ff4f6c;
 }
-
 .btn-green-active {
     position: relative;
     top: 4px;
@@ -225,7 +169,6 @@ a:hover{
     -moz-box-shadow: 0px 0px 11px 8px #3bf71e;
     box-shadow: 0px 0px 11px 8px #3bf71e;
 }
-
 .btn-orange-active {
     position: relative;
     top: 4px;
@@ -234,8 +177,7 @@ a:hover{
     -moz-box-shadow: 0px 0px 11px 8px #ff9012;
     box-shadow: 0px 0px 11px 8px #ff9012;
 }
-
-.btn-blue-active{
+.btn-blue-active {
     position: relative;
     top: 4px;
     background: radial-gradient(circle, #aeffff 0%, #00ffff 100%);
@@ -244,265 +186,198 @@ a:hover{
     box-shadow: 0px 0px 11px 8px #00ffff;
 
 }
-
-/*----------------------------------------------------MEDIA QUERIES--*/
-@media (max-height: 559px) {
+/*--------------------------------------------CUSTOM SPACERS--*/
+.h-22 {
+    height: 22%;
+}
+.h-30 {
+    height: 30%;
+}
+.h-33 {
+    height: 33%;
+}
+/*---------------------------------------------MEDIA QUERIES--*/
+@media (min-width: 440px){
     .general-container {
-        height: 280px;
-        width: 400px;
-    }
-    #welcome-to, .select-difficulty{
-        font-size: 0.9rem;
-        margin: 5px 0 0 0;
-    }
-    .logo {
-        margin-top: 5px;
-        font-size: 1.8rem;
-    }
-    .tagline{
-        margin: 0;
-    }
-    .option-btn{
-        margin-top: 8px;
-        font-size: 0.6rem;
-    }
-    .difficulty-btn{
-        margin: 0;
-        font-size: 0.6rem;
-        padding: 5px 0;
-    }
-    .difficulty-description {
-        font-size: 0.7rem;
-        margin: 5px 0;
-    }
-    #diff-menu-link {
-        margin: 0;
-        padding: 0;
-        font-size: 0.6rem;
+        max-width: 340px;
     }
 }
-
- @media (min-width: 576px) and (min-height: 560px) { 
+@media (min-height: 640px) and (min-width: 440px){
+    .general-container{
+        max-width: 550px;
+    }
+    #welcome-to {
+    font-size: 1rem;
+    
+    }
+    #recommended {
+        font-size: 0.7rem;
+        top: 5px;
+    }
     .logo {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
+
+    }
+    .tagline {
+        font-size: 0.8rem;
     }
     .select-difficulty {
-        font-size: 1rem;
         margin: 10px 0;
     }
     .difficulty-btn {
         font-size: 0.8rem;
-        margin-bottom: 10px;
     }
-    .difficulty-description{
-        font-size: 1rem;
-        margin-bottom: 10px;
+    .difficulty-description {
+        font-size: 0.9rem;
     }
-    .game-container {
-        height: 420px;
-    }
-    #game-menu-link {
-        margin: 0;  
-    }
-    .btn-row {
-        margin-top: 15px;
-    }
-    .start-btn, #game-menu-link {
-        height: 55px;
-        width: 80px;
-        font-size: 1rem;
+    #game-logo {
+        font-size: 2rem;
     }
     .level-screen {
-        font-size: 1.5rem;
+        font-size: 1rem;  
     }
-    #diff-menu-link {
-        position: relative;
-        bottom: 10px;
-        margin: 0;
-        padding: 0;
-        font-size: 0.6rem;
-    } 
 }
- /* @media (min-width: 576px) { 
-    .logo {
-        font-size: 3.3rem;
+@media (min-height: 800px){
+    .general-container {
+        min-width: 280px;
     }
-    .select-difficulty {
-        font-size: 2rem
-    }
-    .difficulty-btn {
-        font-size: 1.5rem;
-    }
-    .difficulty-description{
+    #welcome-to {
         font-size: 1.2rem;
     }
-    .game-container {
-        height: 400px;
-    }
-    #game-menu-link {
-        margin: 0;  
-    }
-    .btn-row {
-        margin-top: 15px;
-    }
-    .start-btn, #game-menu-link {
-        height: 55px;
-        width: 80px;
-        font-size: 1rem;
-    }
-    .level-screen {
-        font-size: 1.5rem;
-    } 
-} */
+    #recommended {
+        font-size: 0.8rem;
 
-@media (min-width: 768px) and (min-height:560px) {
-    .main-menu-link a{
-        font-size: 1rem;
     }
     .logo {
-        padding: 0 15px 5px 15px;
-        font-size: 4.5rem;
+        font-size: 1.9rem;
+
     }
-    .game-container {
-        height: 475px;
+    .tagline {
+        font-size: 1rem;
+    }
+    .option-btn, .difficulty-btn {
+        font-size: 1.1rem;
+        width: 220px;
+    }
+    .select-difficulty {
+        font-size: 1.4rem;
+    }
+    .difficulty-description {
+        font-size: 0.8rem;
+    }
+    .menu-link {
+        font-size: 1rem;
+        width: 80px;
+        height: 50px;
+    }
+} 
+@media (min-height: 750px) and (min-width: 576px){
+    .general-container {
+        min-height: 600px;
+    }
+    #welcome-to {
+        font-size: 1.4rem;
+        margin: 10px 0;
+    }
+   .logo {
+        font-size: 4rem;
+        margin: 10px 0;
+    }
+    .tagline {
+        font-size: 1.2rem;
+        margin: 15px;
+    }
+    .option-btn, .difficulty-btn {
+        font-size: 1.6rem;
+        width: 280px;
+    }
+    .select-difficulty {
+        font-size: 1.8rem;
+    }
+    .difficulty-description {
+        font-size: 1.4rem;
+    }
+    .menu-link {
+        font-size: 1.2rem;
+        width: 100px;
+        height: 60px;
+    }
+    #game-logo {
+        font-size: 3.5rem;
+    }
+    #game-menu-link {
+        font-size: 1rem;
+        width: 80px;
+    }
+    #start {
+        font-size: 1rem;
+        width: 80px;
+    }
+    .level-screen {
+        font-size: 1.5rem;  
+    }
+}
+
+@media (min-height: 750px) and (min-width: 700px){
+    .general-container {
+        min-height: 600px;
+    }
+    #welcome-to{
+        font-size: 1.4rem;
+        margin: 10px 0;
+    }
+   .logo {
+        font-size: 4rem;
+        margin: 10px 0;
+    }
+    .tagline {
+        font-size: 1.2rem;
+        margin: 15px;
+    }
+    .option-btn, .difficulty-btn {
+        font-size: 1.6rem;
+        width: 280px;
+    }
+}
+
+@media (min-height: 840px) and (min-width: 768px){
+    .logo {
+        font-size: 3rem;
     }
     .tagline {
         font-size: 1.4rem;
-        margin: 30px 0;
     }
-    .option-btn {
-        width: 260px;
+    .option-btn, .difficulty-btn {
         font-size: 1.5rem;
-    }
-    .how-to-play h4 {
-        font-size: 2.8rem;
-    }
-    .how-to-play p {
-        font-size: 1.5rem;
-        padding: 10px;
-    }
-    .select-difficulty {
-        font-size: 2.5rem;
-    }
-    .difficulty-description{
-        font-size: 1.5rem;
-    }
-    .level-screen {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 992px) and (min-height: 560px) {
-    #welcome-to {
-        font-size: 2rem;
-        letter-spacing: 10px;
-    }
-    .logo {
-        font-size: 5rem;
-        border-width: 8px;
+        width: 280px;
     }
     #recommended {
         font-size: 1rem;
-    }
-    .game-container {
-        height: 500px;
+
     }
 }
 
-@media (min-width: 1200px) and (min-height: 560px) {
+@media (min-height: 992px) and (min-width: 992px){
+    #welcome-to {
+        margin: 10px 0;
+        font-size: 1.4rem;
+    }
+    .logo {
+        font-size: 4rem;
+        border: 8px solid black;
+        margin: 10px 0;
+    }
     .tagline {
-        font-size: 1.8rem;
-    }
-    .general-container {
-        min-height: 500px;
-    }
-    .difficulty-btn {
+        margin: 10px 0;
         font-size: 1.5rem;
-        margin: 10px;
     }
-    #diff-menu-link {
-        font-size: 1.2rem;
-        height: 60px;
-        width: 100px;
-        margin-top: 10px;
-    }
-} 
-
-/*----------------------MAX-HEIGHT QUERY TO FIX LANDSCAPE PHONE BUGS--*/
-/* @media (max-height: 400px){
-    .general-container {
-        height: 280px;
-        width: 400px;
-    }
-    #welcome-to, .select-difficulty{
-        font-size: 0.9rem;
-        margin: 5px 0 0 0;
-    }
-    .logo {
-        margin-top: 5px;
+    .option-btn, .difficulty-btn {
+        margin-top: 15px;
         font-size: 1.8rem;
+        width: 320px;
     }
-    .tagline{
-        margin: 0;
-    }
-    .option-btn{
-        margin-top: 8px;
-        font-size: 0.6rem;
-    }
-    .difficulty-btn{
-        margin: 0;
-        font-size: 0.6rem;
-        padding: 5px 0;
-    }
-    .difficulty-description {
-        font-size: 0.7rem;
-        margin: 5px 0;
-    }
-    #diff-menu-link {
-        margin: 0;
-        padding: 0;
-        font-size: 0.6rem;
+    #recommended {
+        font-size: 1.2rem;
+
     }
 }
-
-@media (max-height: 600px){
-    /* .general-container {
-        height: 500px;
-        width: 400px;
-    } */
-    /* #welcome-to{
-        font-size: 0.9rem;
-        margin: 5px 0 0 0;
-    }
-    .logo {
-        margin-top: 5px;
-        font-size: 1.8rem;
-    }
-    .tagline{
-        margin: 0;
-        font-size: 0.6rem;
-    }
-    .option-btn {
-        margin-top: 8px;
-        font-size: 0.8rem;
-    }
-    .select-difficulty {
-        margin: 10 0;
-        font-size: 1rem;
-    }
-    .difficulty-btn{
-        margin: 0;
-        font-size: 0.6rem;
-        padding: 5px 0;
-    }
-    .difficulty-description {
-        font-size: 0.7rem;
-        margin: 5px 0;
-    }
-    #diff-menu-link {
-        margin: 0;
-        padding: 0;
-        font-size: 0.6rem;
-    }
-
-}  */

@@ -71,19 +71,33 @@ function startGame(){
     userTurn = false;
     compCount = 0;
     level = 1;
-    if (difficulty === "easy"){
-        speed = 800;
-        winLimit = 15;
-    } else if (difficulty === "normal"){
-        speed = 600;
-        winLimit = 20;
-    } else if (difficulty === "hard"){
-        speed = 500;
-        winLimit = 25;
-    } else {
-        speed = 600;
-        winLimit = 20;
+    switch (difficulty){
+        case "easy":
+            speed = 800;
+            winLimit = 15;
+            break;
+        case "hard":
+            speed = 500;
+            winLimit = 25;
+            break;
+        default:
+            speed = 600;
+            winLimit = 20;
+
     };
+    // if (difficulty === "easy"){
+    //     speed = 800;
+    //     winLimit = 15;
+    // } else if (difficulty === "normal"){
+    //     speed = 600;
+    //     winLimit = 20;
+    // } else if (difficulty === "hard"){
+    //     speed = 500;
+    //     winLimit = 25;
+    // } else {
+    //     speed = 600;
+    //     winLimit = 20;
+
 
     //Get random array to decide computer order
     for (let i = 0; i < winLimit; i++){

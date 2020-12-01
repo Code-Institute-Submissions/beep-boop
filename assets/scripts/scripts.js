@@ -17,6 +17,8 @@ const redAudio = new Audio("assets/audio/note-1.mp3");
 const greenAudio = new Audio("assets/audio/note-2.mp3");
 const orangeAudio = new Audio("assets/audio/note-3.mp3");
 const blueAudio = new Audio("assets/audio/note-4.mp3");
+const gameWinJingle = new Audio("assets/audio/success.mp3")
+const gameFailJingle = new Audio("assets/audio/fail.mp3")
 
 //GAME VARIABLES
 let compOrder = [];
@@ -78,7 +80,7 @@ function startGame(){
             break;
         case "hard":
             speed = 500;
-            winLimit = 25;
+            winLimit = 2;
             break;
         default:
             speed = 600;
@@ -128,7 +130,7 @@ function avOutputs(btnVar, btnColorString , audioSample){
         btnVar.removeClass(btnColorString + "-active").addClass(btnColorString);
     }, 200);
 
-    if(sessionStorage.audio === "true"){
+    if(sessionStorage.audio === "true" || !sessionStorage.audio){
         audioSample.play();
     };
 
@@ -204,12 +206,20 @@ function checkOrder(){
 let winGame = () => {
     userTurn = false;
     levelDisplay.text("Winner!")
-    console.log("WIN")
-}
+    if(sessionStorage.audio === "true" || !sessionStorage.audio){
+        setTimeout(function(){
+            gameWinJingle.play();
+        }, 500);
+    };
+};
 
 let loseGame = () => {
     userTurn = false;
     levelDisplay.text("Game over!")
-    console.log("LOSE")
+    if(sessionStorage.audio === "true" || !sessionStorage.audio){
+        setTimeout(function(){
+            gameFailJingle.play();
+        }, 500);
+    };
 }
 

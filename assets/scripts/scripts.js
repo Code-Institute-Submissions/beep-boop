@@ -204,8 +204,14 @@ function checkOrder(){
 };
 
 let winGame = () => {
+    setTimeout(flashLights, 200);
+    let clearFlash = setInterval(flashLights, 1600);
     userTurn = false;
-    levelDisplay.text("Winner!")
+    levelDisplay.text("You win!");
+    setTimeout(function(){
+        clearInterval(clearFlash);
+        levelDisplay.text("Press start");
+    }, 4000);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         setTimeout(function(){
             gameWinJingle.play();
@@ -214,12 +220,39 @@ let winGame = () => {
 };
 
 let loseGame = () => {
+    setTimeout(flashLights, 200);
+    let clearFlash = setInterval(flashLights, 1600);
     userTurn = false;
-    levelDisplay.text("Game over!")
+    levelDisplay.text("Game over!");
+    setTimeout(function(){
+        clearInterval(clearFlash);
+        levelDisplay.text("Press start");
+    }, 4000);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         setTimeout(function(){
             gameFailJingle.play();
         }, 500);
     };
-}
+};
 
+
+
+function flashLights(){
+    redBtn.removeClass("btn-red").addClass("btn-red" + "-active");
+    setTimeout(function(){
+    redBtn.removeClass("btn-red" + "-active").addClass("btn-red");
+    }, 800);
+    greenBtn.removeClass("btn-green").addClass("btn-green" + "-active");
+    setTimeout(function(){
+    greenBtn.removeClass("btn-green" + "-active").addClass("btn-green");
+    }, 800);
+    orangeBtn.removeClass("btn-orange").addClass("btn-orange" + "-active");
+    setTimeout(function(){
+    orangeBtn.removeClass("btn-orange" + "-active").addClass("btn-orange");
+    }, 800);
+    blueBtn.removeClass("btn-blue").addClass("btn-blue" + "-active");
+    setTimeout(function(){
+    blueBtn.removeClass("btn-blue" + "-active").addClass("btn-blue");
+    }, 800);
+
+};

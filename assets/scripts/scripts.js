@@ -190,8 +190,8 @@ function checkOrder(){
             level++;
             userOrder = [];
             userCount = 0;
+            levelDisplay.text(`LEVEL : ${level}`);
             setTimeout(function(){
-            levelDisplay.text(`LEVEL : ${level}`)
             intervalID = setInterval(compPlay, speed);
             }, 1000);
         }

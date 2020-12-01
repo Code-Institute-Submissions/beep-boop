@@ -6,15 +6,11 @@
         url('../fonts/digital-7-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
 /*-------------------------------------------------SHARED STYLES--*/
-
 body {
     background-image: url("../images/background.jpg");
 }
-
 .general-container {
     height: 50%;
     min-height: 280px;
@@ -27,7 +23,6 @@ body {
     -moz-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
     box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
 }
-
 .logo {
     font-family: 'Faster One', Impact, sans-serif;
     text-transform: uppercase;
@@ -37,7 +32,6 @@ body {
     width: 100%;
     margin-bottom: 4px;
 }
-
 .option-btn, .difficulty-btn {
     border-radius: 15px;
     text-align: center;
@@ -48,7 +42,6 @@ body {
     color: #fff;
     min-width: 175px;
 }
-
 .menu-link {    
     background-color: #FFF7B0;
     color: #000;
@@ -66,39 +59,33 @@ body {
     font-family: 'Bungee Shade', "Lucida Console", monospace;
     font-size: 0.7rem;
 }
-
-#welcome-to{
-    font-family: bungee, Impact, sans-serif;;
+#welcome-to {
+    font-family: Bungee, Impact, sans-serif;
     font-size: 0.8rem;
     letter-spacing: 5px;
     margin-top: 5px;
 }
-
 #recommended {
-    font-family: Bungee, Impact, sans-serif;;
+    font-family: Bungee, Impact, sans-serif;
     font-size: 0.7rem;
     position: relative;
     top: 5px;
 }
-
 /*--------------------------------------------DIFFICULTY.HTML--*/
-.select-difficulty{
+.select-difficulty {
     font-family: Bungee, Impact, sans-serif;
     font-size: 1rem;
     margin: 5px auto;
 }
-
 .difficulty-btn {
     font-size: 0.6rem;
  }
-
-.difficulty-description{
+.difficulty-description {
     font-size: 0.6rem;
     font-weight: bold;
     font-family: 'DM mono', "Lucida Console", monospace;
     margin-top: 5px;
 }
-
 /*--------------------------------------------------GAME.HTML--*/
 .game-btn {
     border-radius: 15px;
@@ -107,7 +94,6 @@ body {
     box-shadow: 4px 5px 1px #000000bf;
 
 }
-
 #game-menu-link {
     position: relative;
     right:5px;
@@ -115,7 +101,6 @@ body {
     width: 60px;
 
 }
-
 .level-screen {
     background-color: #CECECE;
     font-family: digital-7regular, "Courier New", Courier, monospace;
@@ -126,7 +111,6 @@ body {
     border-radius: 15px;
     height: 20%;
 }
-
 .start-btn {
     color: #fff;
     font-family: Bungee, Impact, sans-serif;
@@ -139,35 +123,28 @@ body {
     box-shadow: 4px 5px 1px #000000bf;
 
 }
-
 .btn-row {
     margin-top: 5px;
 }
-
 /*----------------------------------------------------COLORS--*/
 .game-yellow {
     background-color: #FFE922;
 }
-
 .btn-blue {
     background-color: #09AEAE;
 }
-
 .btn-red {
     background-color: #CF1736;
 }
-
 .btn-green {
     background-color: #26A612;
 }
-
 .btn-orange {
     background-color: #C3750F;
 }
 .modal-bg {
     background-color: #392092bf;
 }
-
 /*--------------------------------------ACTIVE BUTTON COLORS--*/
 .btn-red-active {
     position: relative;
@@ -177,7 +154,6 @@ body {
     -moz-box-shadow: 0px 0px 11px 8px #ff4f6c;
     box-shadow: 0px 0px 11px 8px #ff4f6c;
 }
-
 .btn-green-active {
     position: relative;
     top: 4px;
@@ -186,7 +162,6 @@ body {
     -moz-box-shadow: 0px 0px 11px 8px #3bf71e;
     box-shadow: 0px 0px 11px 8px #3bf71e;
 }
-
 .btn-orange-active {
     position: relative;
     top: 4px;
@@ -195,8 +170,7 @@ body {
     -moz-box-shadow: 0px 0px 11px 8px #ff9012;
     box-shadow: 0px 0px 11px 8px #ff9012;
 }
-
-.btn-blue-active{
+.btn-blue-active {
     position: relative;
     top: 4px;
     background: radial-gradient(circle, #aeffff 0%, #00ffff 100%);
@@ -205,20 +179,16 @@ body {
     box-shadow: 0px 0px 11px 8px #00ffff;
 
 }
-
 /*--------------------------------------------CUSTOM SPACERS--*/
 .h-22 {
     height: 22%;
 }
-
 .h-30 {
     height: 30%;
 }
-
 .h-33 {
     height: 33%;
 }
-
 /*---------------------------------------------MEDIA QUERIES--*/
 @media (min-width: 440px){
     .general-container {
@@ -260,12 +230,11 @@ body {
         font-size: 1rem;  
     }
 }
-
 @media (min-height: 800px){
-    .general-container{
+    .general-container {
         min-width: 280px;
     }
-    #welcome-to{
+    #welcome-to {
         font-size: 1.2rem;
     }
     #recommended {
@@ -295,12 +264,11 @@ body {
         height: 50px;
     }
 } 
-
-@media (min-height: 750px) and (min-width: 576px) {
+@media (min-height: 750px) and (min-width: 576px){
     .general-container {
         min-height: 600px;
     }
-    #welcome-to{
+    #welcome-to {
         font-size: 1.4rem;
         margin: 10px 0;
     }
@@ -343,7 +311,7 @@ body {
     }
 }
 
-@media (min-height: 750px) and (min-width: 700px) {
+@media (min-height: 750px) and (min-width: 700px){
     .general-container {
         min-height: 600px;
     }
@@ -365,7 +333,7 @@ body {
     }
 }
 
-@media (min-height: 840px) and (min-width: 768px) {
+@media (min-height: 840px) and (min-width: 768px){
     .logo {
         font-size: 3rem;
     }
@@ -383,7 +351,7 @@ body {
 }
 
 @media (min-height: 992px) and (min-width: 992px){
-    #welcome-to{
+    #welcome-to {
         margin: 10px 0;
         font-size: 1.4rem;
     }

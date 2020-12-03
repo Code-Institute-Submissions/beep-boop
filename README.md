@@ -1,3 +1,5 @@
+![Mock-ups of 'Beep - Boop' website](assets/images/multi-screen-mockups.jpg "Mock-ups of the 'Beep - Boop' website")
+
 # Beep - Boop
 ### An audio / visual memory game
 

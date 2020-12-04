@@ -48,7 +48,7 @@ The colour palette for the buttons found within the game (excluding the purple '
 
 ![Colour palette from https://www.coolors.co](assets/images/readme-images/palette.png "Colour palette from https://www.coolors.co")
 
-This palette was chosen as it contains 4 distinct colours that could be used for the four 'light-up' buttons found in the game. The colours were used as a basis, before being darkened slightly in order to accentuate the difference when the buttons are 'lit-up'.
+This palette was chosen as it contains 4 distinct colours that could be used for the four 'light-up' buttons found in the game. The colours 'Kelly Green' #29BF12, 'Maximum Blue Green' #08BDBD, 'Red Munsell' F21B3F and 'Yellow Orange Color Wheel' #FF9914 were used as a basis, before being darkened slightly in order to accentuate the difference when the buttons are 'lit-up'.
 
 ### Fonts
 The font used for the 'BEEP - BOOP' logo is 'Faster One' from Google Fonts. This was used as it is a striking font, with the trailing lines alluding to speed and movement. [Click here to view logo.](assets/images/logo.jpg)
@@ -62,12 +62,27 @@ The font 'Digital-7' was used in the level display to give the effect of it bein
 <a name="features"></a>
 ## Features
 ### Implemented Features
+The website features 3 seperate pages (index.html, difficulty.html and game.html). Each of these pages contains a single container that holds all of the necessary elements required to navigate around the website, choose from a selection of options and interact with the game. This container and its contents are responsive to the users device viewport, and is always the same dimensions across the 3 pages. All navigational elements have mouse hover effects to reassure the user that they are indeed clickable links.
 
 #### Index.html
+This is the landing page for the website. The user is immediately presented with the game logo, followed by the tagline 'An audio / visual memory game' thus establishing the purpose of the website very quickly. Below this are 3 clearly titles buttons:
+
+PLAY WITH AUDIO (Highly recommended) - By clicking on this button, the user moves through to the next page of the website (difficulty.html). The button also sets the key/value pair of "audio : 'true'" to the users browsers session storage. This item is then evaluated in the javascript code, to determine whether or not audio is triggered when playing the game. 
+
+PLAY ON MUTE - This functions the same way as the PLAY WITH AUDIO  button, however the key/value pair are set to "audio: 'false'".
+
+HOW TO PLAY - This button triggers a modal, which contains a short set of instructions on how to play the game. The modal can be closed either by clicking on the 'CLOSE' button, or by clicking anywhere outside of the modal body.
+
+If the session storage item is not set (ie. the user goes straight to game.html), the game defaults to audio being enabled as this is the recommended way to play the game.
 
 #### difficulty.html
+Once through to this page, the user is asked to 'SELECT DIFFICULTY' and presented with a further 3 buttons titles 'EASY', 'NORMAL' and 'HARD'. Each button is accompanied by a short description of what each difficulty option entails. Again, by clicking on one of these buttons, a session storage item is set which is later evaluated in the javascript code and used to determine certain factors of the users game experience.
+
+Below these three buttons, a more subtle button is offered to return the user to the 'MAIN MENU' which links back to index.html. This ensures good UX as the user can not get 'trapped' on this page and can return to the main menu to check how to play the game or select a different audio setting.
 
 #### game.html
+The game.html page contains the actual game aspect of the website. Below the BEEP - BOOP logo, the user finds 4 large buttons of varying colours. These are the buttons with which the user plays game. Beneath this, is another button which links the user back to the main menu. This button is styled in the same manner as the main menu link found on difficulty.html to ensure consistency throughout the website. Next to the main menu link is a level display which initially prompts the user to press the 'START' button and then displays the current level of the game. Next to this is the 'START' button which triggers the start of the game.
+
 
 #### Potential Future Features
 

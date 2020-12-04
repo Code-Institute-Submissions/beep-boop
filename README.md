@@ -37,7 +37,8 @@ As a user of the website, I want:
 <a name="design"></a>
 ## Design
 The overall design concept of the website was to make a memory game with the aesthetic of a physical toy that may have been manufactured in the 1980's. The general idea of the game is based heavily on the game 'Simon' which was first manufactured in 1978.
-The game and all navigational features fit within a container which stays the same size as the user navigates throught the website. This gives the impression of there being a solid and material object on the page. The game container features a subtle inset box shadow, used to add to the illusion of the game being a 3D object. As well as this, all buttons feature an offset box shadow which gives the impression they are elevated from the background. This box shadow effect is removed when the buttons are clicked to seem as though the button has physically moved. When the buttons found on the main game page light up, a radial gradient effect is used to suggest that there is a light bulb in the center of the button. As well as this, a box shadow effect is used to suggest that the immediate area surrounding the button is being illuminated by the button (see image below).
+The game and all navigational features fit within a container which stays the same size as the user navigates throught the website. This gives the impression of there being a solid and material object on the page. The game container features a subtle inset box shadow, used to add to the illusion of the game being a 3D object. As well as this, all buttons feature an offset box shadow which gives the impression they are elevated from the background. This box shadow effect is removed when the buttons are clicked to seem as though the button has physically moved. When the buttons found on the main game page light up, a radial gradient effect is used to make the center of the button the brightest, with the brightness slowly fading outwards. This is to suggest that there is a light bulb in the center of the button. As well as this, a box shadow effect is used to suggest that the immediate area surrounding the button is being illuminated by the button (see image below).
+
 ![An illuminated game button](assets/images/readme-images/lit-button.jpg "An illuminated game button")
 ### Wireframes
 
@@ -50,17 +51,13 @@ The colour palette for the buttons found within the game (excluding the purple '
 This palette was chosen as it contains 4 distinct colours that could be used for the four 'light-up' buttons found in the game. The colours were used as a basis, before being darkened slightly in order to accentuate the difference when the buttons are 'lit-up'.
 
 ### Fonts
-![The BEEP - BOOP logo](assets/images/readme-images/logo.jpg "The BEEP - BOOP logo")
-The font used for the 'BEEP - BOOP' logo is 'Faster One' from Google Fonts. This was used as it is a striking font, with the trailing lines alluding to speed and movement.
+The font used for the 'BEEP - BOOP' logo is 'Faster One' from Google Fonts. This was used as it is a striking font, with the trailing lines alluding to speed and movement. [Click here to view logo.](assets/images/logo.jpg)
 
-![An example of the Bungee font](assets/images/readme-images/bungee-font.jpg "An example of the Bungee font")
-The majority of the text on the website is 'Bungee' from Google Fonts. This font was chosen as it is bold and clearly legible, as well as being somewhat reminiscent of the font used for the Pacman computer games, which suits the 80's theme of the website. The font used for the tagline 'An audio / visual memory game' is 'Bungee Shade', also from Google Fonts.
+The majority of the text on the website is 'Bungee' from Google Fonts. This font was chosen as it is bold and clearly legible, as well as being somewhat reminiscent of the font used for the Pacman computer games, which suits the 80's theme of the website. The font used for the tagline 'An audio / visual memory game' is 'Bungee Shade', also from Google Fonts. [Click here to view Bungee font in use.](assets/images/readme-images/bungee-font.jpg)
 
-![An example of the DM Mono font](assets/images/readme-images/dm-mono-font.jpg "An example of the DM Mono font")
-For more verbose sections of the website, the font 'DM Mono' from Google Fonts was used as it has a vaguely digital feel to it which suits the computer game aesthetic, whilst remaining clearly legible. This font can be found in the 'How to play' modal, as well as in the descriptions of the difficulty options.
+For more verbose sections of the website, the font 'DM Mono' from Google Fonts was used as it has a vaguely digital feel to it which suits the computer game aesthetic, whilst remaining clearly legible. This font can be found in the 'How to play' modal, as well as in the descriptions of the difficulty options. [Click here to view DM mono font in use.](assets/images/readme-images/dm-mono-font.jpg)
 
-![Digital-7 font used in the level display](assets/images/readme-images/level-display.jpg "Digital-7 font used in the level display")
-The font 'Digital-7' was used in the level display to give the effect of it being an old LCD display, similar to that found on calculators. This helped add to the illusion of the website actually being a physical toy.
+The font 'Digital-7' was used in the level display to give the effect of it being an old LCD display, similar to that found on calculators. This helped add to the illusion of the website actually being a physical toy. [Click here to view the level display.](assets/images/readme-images/level-display.jpg)
 
 <a name="features"></a>
 ## Features

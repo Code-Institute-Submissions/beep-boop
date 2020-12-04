@@ -72,6 +72,7 @@ function startGame(){
     userOrder = [];
     userTurn = false;
     compCount = 0;
+    userCount = 0;
     level = 1;
     switch (difficulty){
         case "easy":

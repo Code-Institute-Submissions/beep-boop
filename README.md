@@ -62,10 +62,10 @@ The font 'Digital-7' was used in the level display to give the effect of it bein
 <a name="features"></a>
 ## Features
 ### Implemented Features
-The website features 3 seperate pages (index.html, difficulty.html and game.html). Each of these pages contains a single container that holds all of the necessary elements required to navigate around the website, choose from a selection of options and interact with the game. This container and its contents are responsive to the users device viewport, and is always the same dimensions across the 3 pages. All navigational elements have mouse hover effects to reassure the user that they are indeed clickable links.
+The website features 3 seperate pages (index.html, difficulty.html and game.html). Each of these pages contains a single container that holds all of the necessary elements required to navigate around the website and interact with the game. This container and its contents are responsive to the users device viewport, and the container is always the same dimensions across the 3 pages. All navigational elements have mouse hover effects to reassure the user that they are indeed clickable links.
 
 #### Index.html
-This is the landing page for the website. The user is immediately presented with the game logo, followed by the tagline 'An audio / visual memory game' thus establishing the purpose of the website very quickly. Below this are 3 clearly titles buttons:
+This is the landing page for the website. The user is immediately presented with the game logo, followed by the tagline 'An audio / visual memory game' thus establishing the purpose of the website very quickly. Below this are 3 clearly labelled buttons:
 
 PLAY WITH AUDIO (Highly recommended) - By clicking on this button, the user moves through to the next page of the website (difficulty.html). The button also sets the key/value pair of "audio : 'true'" to the users browsers session storage. This item is then evaluated in the javascript code, to determine whether or not audio is triggered when playing the game. 
 
@@ -81,14 +81,66 @@ Once through to this page, the user is asked to 'SELECT DIFFICULTY' and presente
 Below these three buttons, a more subtle button is offered to return the user to the 'MAIN MENU' which links back to index.html. This ensures good UX as the user can not get 'trapped' on this page and can return to the main menu to check how to play the game or select a different audio setting.
 
 #### game.html
-The game.html page contains the actual game aspect of the website. Below the BEEP - BOOP logo, the user finds 4 large buttons of varying colours. These are the buttons with which the user plays game. Beneath this, is another button which links the user back to the main menu. This button is styled in the same manner as the main menu link found on difficulty.html to ensure consistency throughout the website. Next to the main menu link is a level display which initially prompts the user to press the 'START' button and then displays the current level of the game. Next to this is the 'START' button which triggers the start of the game.
+The game.html page contains the actual game aspect of the website. Below the BEEP - BOOP logo, the user finds 4 large buttons of varying colours. These are the buttons with which the user plays game. Beneath this, is another button which links the user back to the main menu. This button is styled in the same manner as the main menu link found on difficulty.html to ensure consistency throughout the website. Next to the main menu link is a level display which initially prompts the user to 'PRESS START', and then once the game has begun displays the current level of the game. Next to this is the 'START' button which triggers the start of the game.
+
+Should the user be successful in completing the game, a success jingle is triggered and all the game buttons flash 3 times. A seperate fail jingle is triggered should the user make a mistake. Both of these jingles sound like 8-bit computer game sound effects, in keeping with the 80's theme.
 
 
 #### Potential Future Features
+I think that the game and it's features are best kept simple, however in the future I may look at adding 'lives' to the game that allow the user to replay a level without starting from level 1 should they make a mistake. The amount of lives allowed could change depending on the difficulty level chosen by the user.
+
+Another idea would be to allow the user to set their own difficulty level by setting the length of the interval in between beeps, and by choosing how many beeps are required to complete the game.
 
 <a name="tech"></a>
 ## Languages and Technologies  Used
+This website is written in HTML, CSS and JavaScript.
 
+### Technologies Used
+1. [Gitpod](https://www.gitpod.io/)
+   * The IDE used to write the code for the website.
+   
+3. [Git](https://git-scm.com)
+   * Used for version control during the website build via the command terminal in Gitpod
+   
+3. [GitHub](https://pages.github.com/)
+   * Used to store the code after being 'committed' and 'pushed' using Git. The website is now hosted via GitHub pages.
+   
+3. [Bootstrap](https://www.getbootstrap.com/)
+   * Used to create structure and some styling, as well as some responsive aspects of the website. Also, the modal found on index.html is powered by Bootstrap code.
+   
+4. [jQuery](https://www.jquery.com/)
+   * jQuery is required to power certain Bootstrap features, including the index.html modal. jQuery is also used to shorten the syntax required to achieve certain functions, such as targeting HTML elements within the JavaScript file. jQuery also improves the readability of the scripts.js file
+   
+5. [Google Fonts](https://www.fonts.google.com/)
+   * Used to provide the 'Faster One', 'Bungee', 'Bungee Shade' and 'DM Mono' fonts used throughout the website.
+   
+6. [1001 Fonts](https://www.1001fonts.com/)
+   * Used to provide the 'Digital-7' font found in the level display in game.html.
+   
+7. [Coolors](https://coolors.co/)
+   * Used to generate the colour palette from which the colours on the website are derived.
+   
+8. [Figma](https://www.figma.com/)
+   * Software used to create mock-ups of website.
+   
+9. [Autoprefixer](https://www.autoprefixer.github.io/)
+   * Used to ensure cross browser validity for CSS.
+   
+10. [Am I Responsive?](http://ami.responsivedesign.is/)
+    * Used to create mock-ups found at the top of this README.
+   
+11. [Audacity](https://www.audacityteam.org/)
+    * Used to edit all the audio found on the website.
+    
+12. [CSSmatic](https://www.cssmatic.com/box-shadow)
+    * Used to create box shadow effect.
+    
+13. [CSS Gradient](https://cssgradient.io/)
+    * Used to create radial gradient effect.
+    
+14. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+    * Used to test responsivity of website and test contrast between backgrounds and fonts.
+    
 <a name="testing"></a>
 ## Testing
 

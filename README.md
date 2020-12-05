@@ -138,7 +138,10 @@ This website is written in HTML, CSS and JavaScript.
 13. [CSS Gradient](https://cssgradient.io/)
     * Used to create radial gradient effect.
     
-14. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+14. [Font Squirrel](https://www.fontsquirrel.com/)
+    * Used to convert .ttf font file into woff and woff2 font file formats.
+    
+15. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
     * Used to test responsivity of website and test contrast between backgrounds and fonts.
     
 <a name="testing"></a>
@@ -204,7 +207,32 @@ If you wish to clone the repository to work on locally, follow these steps:
 ## Credits
 
 ### Code
+* [Bootstrap](https://www.getbootstrap.com/) code used for:
+  * Modal on index.html
+  * Responsive grid layout
+  * Some CSS styling and hover effects
+  
+* [CSS Gradient](https://cssgradient.io/) code used for:
+    * Development of radial gradient effect.
+  
+* [CSSmatic](https://www.cssmatic.com/box-shadow) code used for:
+
+    * The box shadow effect found on the buttons.
+
+Some of the logic and general approach to the coding was influenced by a tutorial on FreeCodeCamp. Click [HERE](https://www.freecodecamp.org/news/simon-javascript-game-tutorial/) to see the tutorial.
 
 ### Content
+The background image was created by Ellie Fulcher. More of Ellie's work can been viewed [HERE](https://www.instagram.com/stone_cold_relic/).
+
+[Internet Archive](https://archive.org/) provided the audio samples for the button beeps. The samples were uploaded by username GH05TY.
+
+[Open Game Art](https://www.opengameart.org) was used to source the game win jingle. "Level up sound effects" by Bart Kelsey. Commissioned by Will Corwin for OpenGameArt.org 
+
+[Freesound](https://www.freesound.org) was used to source the game over jingle. The sample was uploaded to Freesound by [Scream Studios](https://scream.fi/).
 
 ### Acknowledgements
+Huge thanks to my mentor Maranatha Ilesanmi for all his help and guidance on the project.
+
+Thank you to Ellie Fulcher for providing the background image.
+
+And thanks to the Code Institute Slack community for being such a helpful and supportive bunch!

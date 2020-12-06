@@ -74,7 +74,7 @@ button {
             box-shadow: 2px 3px 1px #000000bf;
 }
 
-.menu-link:hover, .diff-menu-link:hover{
+.menu-link:hover, .diff-menu-link:hover {
     color: #fff;
     text-decoration: none;
     background-color: #09AEAE;
@@ -123,6 +123,7 @@ button {
     font-weight: bold; 
     margin-top: 5px;
 }
+
 /*--------------------------------------------------GAME.HTML--*/
 #game-logo {
     margin-top: 10px;
@@ -134,7 +135,6 @@ button {
     height: 90%;
     -webkit-box-shadow: 4px 5px 1px #000000bf;
             box-shadow: 4px 5px 1px #000000bf;
-
 }
 
 .level-screen {
@@ -232,16 +232,18 @@ button {
 .h-22 {
     height: 22%;
 }
+
 .h-30 {
     height: 30%;
 }
+
 .h-33 {
     height: 33%;
 }
 
 /*---------------------------------------------MEDIA QUERIES--*/
 @media (min-width: 440px) and (min-height: 640px){
-    .general-container{
+    .general-container {
         max-width: 760px;
         min-height: 360px;
     }
@@ -301,10 +303,9 @@ button {
         height: 50px;
         padding: 0;
     }
-
 }
 
-@media (min-width: 576px) and (min-height: 750px) {
+@media (min-width: 576px) and (min-height: 750px){
     .general-container {
         min-height: 600px;
         min-width: 280px;
@@ -373,6 +374,5 @@ button {
     }
     #recommended {
         font-size: 1.2rem;
-
     }
 }

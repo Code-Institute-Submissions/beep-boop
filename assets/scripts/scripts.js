@@ -32,6 +32,7 @@ let speed;
 let winLimit;
 let intervalID;
 let levelDisplay = $("#level");
+let startGameDelay = false;
 
 /* USER CLICK HANDLERS
 Set session storage */ 
@@ -56,15 +57,24 @@ hard.click(function(){
     });
 
 /* Game button click handlers */
-startBtn.click(startGame);
+startBtn.click(checkFirstGame);
 redBtn.click(red);
 greenBtn.click(green);
 orangeBtn.click(orange);
 blueBtn.click(blue);
-
-    
+   
 /* GAME FUNCTIONS
 Start of new game */
+
+/* If the winGame or loseGame function is running, wait until it has finished before starting new game */
+function checkFirstGame(){
+    if (startGameDelay === false){
+        startGame();
+    } else {
+        levelDisplay.text("Please Wait");
+        setTimeout(startGame, 4000);
+    }
+}
 function startGame(){
     levelDisplay.text("LEVEL : 1");
     compOrder = [];
@@ -226,6 +236,7 @@ let winGame = () => {
 }
 /* This functions in the same way as winGame() */
 let loseGame = () => {
+    startGameDelay = true;
     setTimeout(flashLights, 200);
     let clearFlash = setInterval(flashLights, 1600);
     userTurn = false;
@@ -233,12 +244,14 @@ let loseGame = () => {
     setTimeout(function(){
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
+        startGameDelay = false;
     }, 4000);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         setTimeout(function(){
             gameFailJingle.play();
         }, 500);
     }
+
 }
 
 

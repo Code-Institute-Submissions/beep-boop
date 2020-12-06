@@ -72,7 +72,6 @@ function checkFirstGame(){
         startGame();
     } else {
         levelDisplay.text("Please Wait");
-        setTimeout(startGame, 4000);
     }
 }
 function startGame(){
@@ -215,6 +214,8 @@ function checkOrder(){
 }
 
 let winGame = () => {
+    /* If true, this add a delay to a new game being started to allow time for the animation to run */
+    startGameDelay = true;
     /* Wait 0.2 seconds before calling flashLights() to allow avOutputs() to finish */
     setTimeout(flashLights, 200);
     /* Then call flashLights every 1.6 seconds which is how long flashLights() takes to complete a
@@ -223,10 +224,11 @@ let winGame = () => {
     userTurn = false;
     levelDisplay.text("You win!");
     /* Wait 4 seconds, the length of 2.5 rounds of flashLights() before clearing interval and setting
-    level display to 'Press Start' */
+    level display to 'Press Start'. Set startGameDelay to false to allow a new game to be started */
     setTimeout(function(){
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
+        startGameDelay = false;
     }, 4000);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         setTimeout(function(){

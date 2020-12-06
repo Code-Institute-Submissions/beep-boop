@@ -181,29 +181,26 @@ function blue(){
 /*Check the user input with the compOrder array to determine whether the game is lost, won or not yet finished*/
 function checkOrder(){
     /*If the last value that was pushed to the userOrder array is not equal to the compOrder array at the same 
-    index, call loseGame()*/
+    index, the user has lost and the game is over*/
     if(userOrder[userCount - 1] !== compOrder[userCount - 1]){
         loseGame();
+        return;
     }
     /*If the length of the userOrder array is the same value as userCount, it is no longer the users turn*/
     if(userOrder.length === level){
         userTurn = false;
-
-        // if(userOrder[level -1] !== compOrder[level -1]){
-        // loseGame();
-        // }
-        if(userOrder[level - 1] === compOrder[level - 1] && level < winLimit){
-            userTurn = false;
+        /*If the current level is the same as the winLimit variable, the user has won, else the level increases
+        by 1 and the game continues*/
+        if(level === winLimit){
+            winGame();
+        } else {
             level++;
             userOrder = [];
             userCount = 0;
             levelDisplay.text(`LEVEL : ${level}`);
             setTimeout(function(){
-            intervalID = setInterval(compPlay, speed);
+                intervalID = setInterval(compPlay, speed);
             }, 1000);
-        }
-        if(userOrder[level - 1] === compOrder[level - 1] && level === winLimit){
-            winGame();
         }
     };
 };

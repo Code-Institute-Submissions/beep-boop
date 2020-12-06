@@ -36,7 +36,6 @@ button {
     max-width: 650px;
     border-radius: 30px;
     -webkit-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
     box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,1);
 }
 
@@ -53,7 +52,8 @@ button {
 .option-btn, .difficulty-btn {
     border-radius: 15px;
     text-align: center;
-    box-shadow: 4px 5px 1px #000000bf;
+    -webkit-box-shadow: 4px 5px 1px #000000bf;
+            box-shadow: 4px 5px 1px #000000bf;
     border: none;
     color: #fff;
     min-width: 175px;
@@ -67,7 +67,8 @@ button {
     padding: 0;
     border-radius: 15px;
     font-size: 0.6rem;
-    box-shadow: 2px 3px 1px #000000bf;
+    -webkit-box-shadow: 2px 3px 1px #000000bf;
+            box-shadow: 2px 3px 1px #000000bf;
 }
 
 .menu-link:hover, .diff-menu-link:hover{
@@ -75,6 +76,8 @@ button {
     text-decoration: none;
     background-color: #09AEAE;
     /* TRANSITION EFFECT COPIED FROM BOOTSTRAP */
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out;
     transition: color .15s ease-in-out,background-color .15s ease-in-out;
 }
 
@@ -126,7 +129,8 @@ button {
     border-radius: 15px;
     width: 85%;
     height: 90%;
-    box-shadow: 4px 5px 1px #000000bf;
+    -webkit-box-shadow: 4px 5px 1px #000000bf;
+            box-shadow: 4px 5px 1px #000000bf;
 
 }
 
@@ -135,7 +139,8 @@ button {
     font-family: digital-7regular, "Courier New", Courier, monospace;
     font-size: 0.8rem;
     text-transform: uppercase;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 0;
     border-radius: 15px;
     height: 20%;
@@ -149,7 +154,8 @@ button {
     padding: 0;
     border-radius: 15px;
     font-size: 0.6rem;
-    box-shadow: 4px 5px 1px #000000bf;
+    -webkit-box-shadow: 4px 5px 1px #000000bf;
+            box-shadow: 4px 5px 1px #000000bf;
 }
 
 .btn-row {
@@ -185,36 +191,36 @@ button {
 .btn-red-active {
     position: relative;
     top: 4px;
+    background: -o-radial-gradient(circle, #ff8a8a 10%, #ff4f6c 100%);
     background: radial-gradient(circle, #ff8a8a 10%, #ff4f6c 100%);
     -webkit-box-shadow: 0px 0px 11px 8px #ff4f6c;
-    -moz-box-shadow: 0px 0px 11px 8px #ff4f6c;
     box-shadow: 0px 0px 11px 8px #ff4f6c;
 }
 
 .btn-green-active {
     position: relative;
     top: 4px;
+    background: -o-radial-gradient(circle, #acff92 0%, #3bf71e 100%);
     background: radial-gradient(circle, #acff92 0%, #3bf71e 100%);
     -webkit-box-shadow: 0px 0px 11px 8px #3bf71e;
-    -moz-box-shadow: 0px 0px 11px 8px #3bf71e;
     box-shadow: 0px 0px 11px 8px #3bf71e;
 }
 
 .btn-orange-active {
     position: relative;
     top: 4px;
+    background: -o-radial-gradient(circle, #ffd5a4 0%, #ffae00 100%);
     background: radial-gradient(circle, #ffd5a4 0%, #ffae00 100%);
     -webkit-box-shadow: 0px 0px 11px 8px #ff9012;
-    -moz-box-shadow: 0px 0px 11px 8px #ff9012;
     box-shadow: 0px 0px 11px 8px #ff9012;
 }
 
 .btn-blue-active {
     position: relative;
     top: 4px;
+    background: -o-radial-gradient(circle, #aeffff 0%, #00ffff 100%);
     background: radial-gradient(circle, #aeffff 0%, #00ffff 100%);
     -webkit-box-shadow: 0px 0px 11px 8px #00ffff;
-    -moz-box-shadow: 0px 0px 11px 8px #00ffff;
     box-shadow: 0px 0px 11px 8px #00ffff;
 
 }

@@ -17,8 +17,8 @@ const redAudio = new Audio("assets/audio/note-1.mp3");
 const greenAudio = new Audio("assets/audio/note-2.mp3");
 const orangeAudio = new Audio("assets/audio/note-3.mp3");
 const blueAudio = new Audio("assets/audio/note-4.mp3");
-const gameWinJingle = new Audio("assets/audio/success.mp3")
-const gameFailJingle = new Audio("assets/audio/fail.mp3")
+const gameWinJingle = new Audio("assets/audio/success.mp3");
+const gameFailJingle = new Audio("assets/audio/fail.mp3");
 
 /* GAME VARIABLES */
 let compOrder = [];
@@ -28,7 +28,6 @@ let compCount = 0;
 let userCount = 0;
 let level = 1;
 let difficulty = sessionStorage.difficulty;
-let audio;
 let speed;
 let winLimit;
 let intervalID;
@@ -52,7 +51,7 @@ normal.click(function(){
     sessionStorage.setItem("difficulty", "normal");
     });
     
-hard.click(function(){;
+hard.click(function(){
     sessionStorage.setItem("difficulty", "hard");
     });
 
@@ -87,15 +86,15 @@ function startGame(){
         default:
             speed = 600;
             winLimit = 20;
-    };
+    }
     /* Get random array of numbers between 1 - 4 to decide computer order. The length of the array is set by the winLimit 
     variable assigned in the switch statement above. */
     for (let i = 0; i < winLimit; i++){
         compOrder.push(Math.floor(Math.random()* 4 + 1));
-    };
+    }
     /* Starts the game by repeatedly calling CompPlay() with interval assigned to speed variable in switch statement above. */
     intervalID = setInterval(compPlay, speed);
-};
+}
 
 /* Computers turn */
 function compPlay(){
@@ -107,26 +106,26 @@ function compPlay(){
         compCount = 0;
         clearInterval(intervalID);
         userTurn = true;
-    };
+    }
     /* If userTurn is not true, check the compOrder array at the index of the compCount value and 
     call the associated avOutputs function. */
     if(!userTurn){
         if(compOrder[compCount] === 1){
             avOutputs(redBtn, "btn-red", redAudio);
-        };
+        }
         if(compOrder[compCount] === 2){
             avOutputs(greenBtn, "btn-green", greenAudio);
-        };
+        }
         if(compOrder[compCount] === 3){
             avOutputs(orangeBtn, "btn-orange", orangeAudio);
-        };
+        }
         if(compOrder[compCount] === 4){
             avOutputs(blueBtn, "btn-blue", blueAudio);
-        };
+        }
         /* Increase compCount variable by one in order to iterate through the compOrder array */
         compCount++;
-    };
-};
+    }
+}
 
 /* Trigger appropriate CSS classes and audio files */
 function avOutputs(btnVar, btnColorString , audioSample){
@@ -137,9 +136,9 @@ function avOutputs(btnVar, btnColorString , audioSample){
     /* If 'audio' holds the value 'true' in session storage, play associated audio */
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         audioSample.play();
-    };
+    }
 
-};
+}
 
 /* Trigger AV and push number to userOrder array. These functions are triggered by a user click. */
 function red(){
@@ -148,8 +147,8 @@ function red(){
     avOutputs(redBtn, "btn-red", redAudio);
     userCount++;
     checkOrder();
-    };
-};
+    }
+}
 
 function green(){
     if(userTurn === true){
@@ -157,8 +156,8 @@ function green(){
     avOutputs(greenBtn, "btn-green", greenAudio);
     userCount++;
     checkOrder();
-    };
-};
+    }
+}
 
 function orange(){
     if(userTurn === true){
@@ -166,8 +165,8 @@ function orange(){
     avOutputs(orangeBtn, "btn-orange", orangeAudio);
     userCount++;
     checkOrder();
-    };
-};
+    }
+}
 
 function blue(){
     if(userTurn === true){
@@ -175,8 +174,8 @@ function blue(){
     avOutputs(blueBtn, "btn-blue", blueAudio);
     userCount++;
     checkOrder();
-    };
-};
+    }
+}
 
 /* Check the user input with the compOrder array to determine whether the game is lost, won or not yet finished */
 function checkOrder(){
@@ -202,8 +201,8 @@ function checkOrder(){
                 intervalID = setInterval(compPlay, speed);
             }, 1000);
         }
-    };
-};
+    }
+}
 
 let winGame = () => {
     /* Wait 0.2 seconds before calling flashLights() to allow avOutputs() to finish */
@@ -223,8 +222,8 @@ let winGame = () => {
         setTimeout(function(){
             gameWinJingle.play();
         }, 500);
-    };
-};
+    }
+}
 /* This functions in the same way as winGame() */
 let loseGame = () => {
     setTimeout(flashLights, 200);
@@ -239,8 +238,8 @@ let loseGame = () => {
         setTimeout(function(){
             gameFailJingle.play();
         }, 500);
-    };
-};
+    }
+}
 
 
 /* Remove normal CSS class on game buttons, and add 'lit up' CSS class. Wait .8 seconds before
@@ -263,4 +262,4 @@ function flashLights(){
     blueBtn.removeClass("btn-blue" + "-active").addClass("btn-blue");
     }, 800);
 
-};
+}

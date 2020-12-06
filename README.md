@@ -123,7 +123,7 @@ This website is written in HTML, CSS and JavaScript.
 8. [Figma](https://www.figma.com/)
    * Software used to create mock-ups of website.
    
-9. [Autoprefixer](https://www.autoprefixer.github.io/)
+9. [Autoprefixer](https://autoprefixer.github.io/)
    * Used to ensure cross browser validity for CSS.
    
 10. [Am I Responsive?](http://ami.responsivedesign.is/)

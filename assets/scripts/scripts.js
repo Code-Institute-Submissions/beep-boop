@@ -33,6 +33,7 @@ let winLimit;
 let intervalID;
 let levelDisplay = $("#level");
 let startGameDelay = false;
+let blockButtons = false;
 
 /* USER CLICK HANDLERS
 Set session storage */ 
@@ -78,6 +79,7 @@ function startGame(){
     levelDisplay.text("LEVEL : 1");
     compOrder = [];
     userOrder = [];
+    blockButtons = true;
     userTurn = false;
     compCount = 0;
     userCount = 0;
@@ -157,7 +159,7 @@ function red(){
     avOutputs(redBtn, "btn-red", redAudio);
     userCount++;
     checkOrder();
-    } else {
+    } else if (!userTurn && blockButtons){
         levelDisplay.text("Please Wait")
     }
 }
@@ -168,7 +170,7 @@ function green(){
     avOutputs(greenBtn, "btn-green", greenAudio);
     userCount++;
     checkOrder();
-    } else {
+    } else if (!userTurn && blockButtons){
         levelDisplay.text("Please Wait")
     }
 }
@@ -179,7 +181,7 @@ function orange(){
     avOutputs(orangeBtn, "btn-orange", orangeAudio);
     userCount++;
     checkOrder();
-    } else {
+    } else if (!userTurn && blockButtons){
         levelDisplay.text("Please Wait")
     }
 }
@@ -190,7 +192,7 @@ function blue(){
     avOutputs(blueBtn, "btn-blue", blueAudio);
     userCount++;
     checkOrder();
-    } else {
+    } else if (!userTurn && blockButtons){
         levelDisplay.text("Please Wait")
     }
 }
@@ -225,6 +227,7 @@ function checkOrder(){
 let winGame = () => {
     /* If true, this add a delay to a new game being started to allow time for the animation to run */
     startGameDelay = true;
+    blockButtons = false;
     /* Wait 0.2 seconds before calling flashLights() to allow avOutputs() to finish */
     setTimeout(flashLights, 200);
     /* Then call flashLights every 1.6 seconds which is how long flashLights() takes to complete a
@@ -248,6 +251,7 @@ let winGame = () => {
 /* This functions in the same way as winGame() */
 let loseGame = () => {
     startGameDelay = true;
+    blockButtons = false;
     setTimeout(flashLights, 200);
     let clearFlash = setInterval(flashLights, 1600);
     userTurn = false;

@@ -41,7 +41,12 @@ The overall design concept of the website was to make a memory game with the aes
 The game and all navigational features fit within a container which stays the same size as the user navigates through the website. This gives the impression of there being a solid and material object on the page. The game container features a subtle inset box shadow, used to add to the illusion of the game being a 3D object. As well as this, all buttons feature an offset box shadow which gives the impression they are elevated from the background. This box shadow effect is removed when the buttons are clicked to seem as though the button has physically moved. When the buttons found on the main game page light up, a radial gradient effect is used to make the center of the button the brightest, with the brightness slowly fading outwards. This is to suggest that there is a light bulb in the center of the button. As well as this, a box shadow effect is used to suggest that the immediate area surrounding the button is being illuminated by the button (see image below).
 
 ![An inactive button and an illuminated button](assets/images/readme-images/buttons-comparison.jpg "An inactive button and an illuminated button")
-### Wireframes
+### Design mock-ups
+[Click here to see index.html mock-ups](assets/images/readme-images/index-mockups.jpg)
+
+[Click here to see difficulty.html mock-ups](assets/images/readme-images/difficulty-mockups.jpg)
+
+[Click here to see game.html mock-ups](assets/images/readme-images/game-mockups.jpg)
 
 ### Colour Scheme
 The colour scheme for the website began with the concept of using yellow for the body of the game and purple for the background. These colours were chosen because of their stark contrast from each other due to being opposites on the colour spectrum. The bright yellow of the game naturally draws the user's eye to it when set against the purple background. The background itself was then made to look more fun and exciting with the addition of colourful geometric shapes which also adds to the 80's aesthetic of the page.

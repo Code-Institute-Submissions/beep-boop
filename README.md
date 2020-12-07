@@ -172,7 +172,93 @@ The HTML code has been checked against the [W3C Markup Validator](https://valida
   * The website has been designed and tested with the aim of enabling the game to be played on as many devices as possible. With this in mind, the CSS code has been made as cross browser compatible as possible with the help of [Autoprefixer](https://autoprefixer.github.io/). All code has been validated through [JS Hint](https://jshint.com/) for JavaScript, [W3C's](https://www.w3.org/) CSS and HTML validators. As well as this, the pages are all highly responsive with the design being suitable for devices of around a 270px square upwards.
 
 ### Manual testing of all elements throughout the website
-List of features/pages and how I tested them...
+The tests detailed in this section were all completed using the following web browsers and hardware:
+|                            | Chrome             | Edge             | Firefox            | Safari |
+| -------------             |:------------------:| -----------------:|-------------------:|--------:|
+| Microsoft Surface 3 (15") | :heavy_check_mark: |:heavy_check_mark: | :heavy_check_mark: |         |
+| Samsung Galaxy A6         | :heavy_check_mark: |:heavy_check_mark: | :heavy_check_mark: |         |
+| Huawei P Smart 2019       | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: |         |
+| Macbook Pro 2016 (13")    | :heavy_check_mark: |                   | :heavy_check_mark: |:heavy_check_mark: |
+| iPad 7th generation 2019  | :heavy_check_mark: |                  | :heavy_check_mark: |:heavy_check_mark: |
+
+#### Index.html tests
+Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+
+##### "PLAY WITH AUDIO" button
+1. Move mouse over button 
+    * ensure hover effect is active.
+2. Click on the button
+    * Check that the box shadow effect is removed to give impression of button being pressed.
+    * Check that button links to difficulty.html.
+    * Within the console, ensure "audio: 'true'" has been saved to session storage.
+  
+##### "PLAY ON MUTE" button
+1. Move mouse over button 
+    * ensure hover effect is active.
+  
+2. Click on the button
+    * Check that the box shadow effect is removed to give impression of button being pressed.
+    * Check that button links to difficulty.html.
+    * Within the console, ensure "audio: 'false'" has been saved to session storage.
+  
+##### "HOW TO PLAY" button
+1. Move mouse over button 
+    * ensure hover effect is active.
+  
+2. Click on the button
+    * Check that the box shadow effect is removed to give impression of button being pressed.
+    * Check that button triggers the 'How to play' modal.
+
+##### "HOW TO PLAY" modal
+1. Display the modal using the "HOW TO PLAY" button
+    * Check that the text and "CLOSE" button load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+  
+2. Move mouse over "CLOSE" button 
+    * ensure hover effect is active.
+  
+3. Click on the "CLOSE" button
+    * Check that the box shadow effect is removed to give impression of button being pressed.
+    * Ensure the modal is successfully closed.
+  
+4. Open modal and click outside of modal body
+    * Ensure the modal is successfully closed.
+  
+#### Difficulty.html
+Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+
+##### "EASY" button
+1. Move mouse over button 
+   * ensure hover effect is active.
+  
+2. Click on the button
+   * Check that the box shadow effect is removed to give impression of button being pressed.
+    * Within the console, check that "difficulty: 'easy'" is saved to session storage.
+  
+##### "NORMAL" button
+1. Move mouse over button 
+    * ensure hover effect is active.
+  
+2. Click on the button
+    * Check that the box shadow effect is removed to give impression of button being pressed.
+    * Within the console, check that "difficulty: 'normal'" is saved to session storage.
+
+##### "HARD" button
+1. Move mouse over button 
+    * ensure hover effect is active.
+  
+2. Click on the button
+   * Check that the box shadow effect is removed to give impression of button being pressed.
+   * Within the console, check that "difficulty: 'hard'" is saved to session storage.
+
+##### "MAIN MENU" button
+1. Move mouse over button 
+   * ensure hover effect is active.
+  
+2. Click on the button
+   * Check that the box shadow effect is removed to give impression of button being pressed.
+   * Check that the button links to index.html
+
+
 
 ### Additional Testing
 Friends/family/slack

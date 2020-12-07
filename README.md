@@ -52,7 +52,7 @@ The colour palette for the buttons found within the game (excluding the purple '
 This palette was chosen as it contains 4 distinct colours that could be used for the four 'light-up' buttons found in the game. The colours 'Kelly Green' #29BF12, 'Maximum Blue Green' #08BDBD, 'Red Munsell' F21B3F and 'Yellow Orange Color Wheel' #FF9914 were used as a basis, before being darkened slightly in order to accentuate the difference when the buttons are 'lit-up'.
 
 ### Fonts
-The font used for the 'BEEP - BOOP' logo is 'Faster One' from Google Fonts. This was used as it is a striking font, with the trailing lines alluding to speed and movement. [Click here to view logo.](assets/images/logo.jpg)
+The font used for the 'BEEP - BOOP' logo is 'Faster One' from Google Fonts. This was used as it is a striking font, with the trailing lines alluding to speed and movement. [Click here to view logo.](assets/images/readme-images/logo.jpg)
 
 The majority of the text on the website is 'Bungee' from Google Fonts. This font was chosen as it is bold and clearly legible, as well as being somewhat reminiscent of the font used for the Pacman computer games, which suits the 80's theme of the website. The font used for the tagline 'An audio / visual memory game' is 'Bungee Shade', also from Google Fonts. [Click here to view Bungee font in use.](assets/images/readme-images/bungee-font.jpg)
 
@@ -147,28 +147,29 @@ This website is written in HTML, CSS and JavaScript.
     
 <a name="testing"></a>
 ## Testing
+The HTML code has been checked against the [W3C Markup Validator](https://validator.w3.org/), the CSS against the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the JavaScript against the [JS Hint](https://jshint.com/) code analysis tool, with any issues highlighted by the validators fixed. The code contains no validity issues.
 
 ### Testing against user requirements (as listed in UX section)
 * To play a memory game
-  * This requirement is clearly met by the website!
+  * This requirement is met by the website by providing a memory game!
   
 * To interact with the website and gain immediate feedback from my interaction
-  * 
+  * The game responds to user clicks with immediate audio and visual feedback. If the user successfully completes the game, the level display shows "YOU WIN!" and a triumphant 8-bit jingle is sounded. If however the user makes a mistake, the level display shows "GAME OVER!" and a game-over jingle sounds. The game-over jingle is reminiscient of classic old-school arcade game game-over sounds. Outside of the game itself, all clickable links have hover effects to reassure the user that they are indeed clickable links hen the mouse is moved over them.
   
 * The game to be simple to understand and play
-  *
+  * The game is a very simple concept taken from the game 'Simon'. Whilst anyone familliar with the game 'Simon' would immediately understand how to play, even without prior knowledge the user can quickly come to understand the rules of the game due to it's simple nature and audio/visual feedback.
   
 * To be able to read the game instructions should I need them
-  *
+  * Should the user not understand the game, there is a clear "HOW TO PLAY" button presented on the landing page for the website. This page is easily accessible from anywhere on the website.
+
+* To be able to play the game with or without sounds
+  * This option is presented to the user immediately upon loading the website. On index.html 2 buttons clearly state "PLAY WITH AUDIO" or "PLAY ON MUTE". This page (signposted as "MAIN MENU") is clearly accessible from anywhere within the website.
   
 * To be able to change the difficulty of the game to be easier or harder
-  *
-  
-* To be able to play the game with or without sounds
-  *
+  * Having selected the audio setting, the users are presented with difficulty.html. On this page there are 3 buttons labelled "EASY", "NORMAL" and "HARD". Beneath the buttons is a short description of what each difficulty setting actually means.
   
 * To be able to play the game on any device
-  *
+  * The website has been designed and tested with the aim of enabling the game to be played on as many devices as possible. With this in mind, the CSS code has been made as cross browser compatible as possible with the help of [Autoprefixer](https://autoprefixer.github.io/). All code has been validated through [JS Hint](https://jshint.com/) for JavaScript, [W3C's](https://www.w3.org/) CSS and HTML validators. As well as this, the pages are all highly responsive with the design being suitable for devices of around a 270px square upwards.
 
 ### Manual testing of all elements throughout the website
 List of features/pages and how I tested them...

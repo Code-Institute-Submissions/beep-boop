@@ -113,6 +113,7 @@ function compPlay(){
     the setInterval method and set userTurn to true to allow the user the click on the game buttons. */ 
     if(compCount === level){
         compCount = 0;
+        levelDisplay.text(`LEVEL : ${level}`);
         clearInterval(intervalID);
         userTurn = true;
     }
@@ -156,6 +157,8 @@ function red(){
     avOutputs(redBtn, "btn-red", redAudio);
     userCount++;
     checkOrder();
+    } else {
+        levelDisplay.text("Please Wait")
     }
 }
 
@@ -165,6 +168,8 @@ function green(){
     avOutputs(greenBtn, "btn-green", greenAudio);
     userCount++;
     checkOrder();
+    } else {
+        levelDisplay.text("Please Wait")
     }
 }
 
@@ -174,6 +179,8 @@ function orange(){
     avOutputs(orangeBtn, "btn-orange", orangeAudio);
     userCount++;
     checkOrder();
+    } else {
+        levelDisplay.text("Please Wait")
     }
 }
 
@@ -183,6 +190,8 @@ function blue(){
     avOutputs(blueBtn, "btn-blue", blueAudio);
     userCount++;
     checkOrder();
+    } else {
+        levelDisplay.text("Please Wait")
     }
 }
 

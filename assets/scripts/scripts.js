@@ -92,7 +92,7 @@ function startGame(){
             break;
         case "hard":
             speed = 500;
-            winLimit = 2;
+            winLimit = 25;
             break;
         default:
             speed = 600;

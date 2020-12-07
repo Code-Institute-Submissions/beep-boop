@@ -22,11 +22,12 @@
 <a name="UX"></a>
 ## UX
 ### User Profiles
-As a user of this website, I am someone looking for a quick and fun memory game to play. I could be of any age over the age of around 4 years old, with at least a basic understanding of English.
+As a user of this website, I am someone looking for a quick and fun memory game to play. I could be of any age over the age of around 6 years old, with at least a basic understanding of English.
 
 ### User Stories
 As a user of the website, I want:
 * To play a memory game
+* To easily understand how to navigate the website
 * To interact with the website and gain immediate feedback from my interaction
 * The game to be simple to understand and play
 * To be able to read the game instructions should I need them
@@ -148,6 +149,26 @@ This website is written in HTML, CSS and JavaScript.
 ## Testing
 
 ### Testing against user requirements (as listed in UX section)
+* To play a memory game
+  * This requirement is clearly met by the website!
+  
+* To interact with the website and gain immediate feedback from my interaction
+  * 
+  
+* The game to be simple to understand and play
+  *
+  
+* To be able to read the game instructions should I need them
+  *
+  
+* To be able to change the difficulty of the game to be easier or harder
+  *
+  
+* To be able to play the game with or without sounds
+  *
+  
+* To be able to play the game on any device
+  *
 
 ### Manual testing of all elements throughout the website
 List of features/pages and how I tested them...

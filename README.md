@@ -322,11 +322,12 @@ Repeat these tests for all difficulty settings ensuring that the session storage
 
 
 ### Additional Testing
-In addition
+* Friends and family asked to visit the website and report on any bugs or UX issues - no undocumented issues have been found.
+* Website posted to 'Peer Code Review' on the Code Institute Slack channel.
 
 ### Known Bugs
+At present, there is an issue if the user clicks on the "START" button whilst the compPlay function is still being called by setInterval. The setInterval methods fails to be cleared by the interval ID and therefore compPlay get stuck in a loop. I have not yet found a fix for this issue. The same issue occurs if the "START" button is clicked rapidly at the start of a game.
 
-<a name="deployment"></a>
 <a name="deployment"></a>
 ## Deployment
 ### Deployment to GitHub pages

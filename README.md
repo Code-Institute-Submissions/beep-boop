@@ -184,7 +184,7 @@ The tests detailed in this section were all completed using the following web br
 #### Index.html tests
 Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
 
-##### "PLAY WITH AUDIO" button
+###### "PLAY WITH AUDIO" button
 1. Move mouse over button 
     * ensure hover effect is active.
 2. Click on the button
@@ -192,7 +192,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
     * Check that button links to difficulty.html.
     * Within the console, ensure "audio: 'true'" has been saved to session storage.
   
-##### "PLAY ON MUTE" button
+###### "PLAY ON MUTE" button
 1. Move mouse over button 
     * ensure hover effect is active.
   
@@ -201,7 +201,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
     * Check that button links to difficulty.html.
     * Within the console, ensure "audio: 'false'" has been saved to session storage.
   
-##### "HOW TO PLAY" button
+###### "HOW TO PLAY" button
 1. Move mouse over button 
     * ensure hover effect is active.
   
@@ -209,7 +209,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
     * Check that the box shadow effect is removed to give impression of button being pressed.
     * Check that button triggers the 'How to play' modal.
 
-##### "HOW TO PLAY" modal
+###### "HOW TO PLAY" modal
 1. Display the modal using the "HOW TO PLAY" button
     * Check that the text and "CLOSE" button load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
   
@@ -226,7 +226,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
 #### Difficulty.html
 Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
 
-##### "EASY" button
+###### "EASY" button
 1. Move mouse over button 
    * ensure hover effect is active.
   
@@ -234,7 +234,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
    * Check that the box shadow effect is removed to give impression of button being pressed.
     * Within the console, check that "difficulty: 'easy'" is saved to session storage.
   
-##### "NORMAL" button
+###### "NORMAL" button
 1. Move mouse over button 
     * ensure hover effect is active.
   
@@ -242,7 +242,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
     * Check that the box shadow effect is removed to give impression of button being pressed.
     * Within the console, check that "difficulty: 'normal'" is saved to session storage.
 
-##### "HARD" button
+###### "HARD" button
 1. Move mouse over button 
     * ensure hover effect is active.
   
@@ -250,7 +250,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
    * Check that the box shadow effect is removed to give impression of button being pressed.
    * Within the console, check that "difficulty: 'hard'" is saved to session storage.
 
-##### "MAIN MENU" button
+###### "MAIN MENU" button
 1. Move mouse over button 
    * ensure hover effect is active.
   
@@ -258,10 +258,71 @@ Check that all text and buttons load with correct styles and spacing, and that t
    * Check that the box shadow effect is removed to give impression of button being pressed.
    * Check that the button links to index.html
 
+#### Game.html
+Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+
+For the purpose of speeding up testing, the number of beeps required to win was significantly lowered for all difficulty settings within the scripts.js file. In order to ensure the session storage was having the desired different outcomes whilst playing the game, 'Easy' mode required 3 successfull repetitions, 'Normal' mode required 4 and 'Hard' mode required 5.
+
+###### Game buttons (red, green, orange, blue)
+1. Click on buttons
+    * Play series of games, ensuring each of the buttons have been utilised within the games. 
+    * Ensure the buttons trigger the correct audio and visual response.
+
+###### "START" button
+1. Move mouse over button 
+    * ensure hover effect is active.
+    
+2. Click on the button
+   * Check that the box shadow effect is removed to give impression of button being pressed.
+   * Check that the button starts a new game.
+   
+###### Level display 
+1. Play a game
+    * Ensure the level display shows the correct level, and updates when new levels are reached.
+
+2. Lose a game
+    * Ensure the level display shows the text "GAME OVER".
+    
+3. Win a game
+    * Ensure the level display shows the text "YOU WIN".
+    
+4. Click on "START" button during winGame() or loseGame() animation
+    * Ensure level display shows "PLEASE WAIT" until animation is complete, then dispays "PRESS START".
+    
+5. Click on a game button whilst it's not the users turn
+    * Ensure the level display shows "PLEASE WAIT" until it's the users turn, then display the current level.
+    
+###### "MAIN MENU" button
+1. Move mouse over button 
+   * ensure hover effect is active.
+  
+2. Click on the button
+   * Check that the box shadow effect is removed to give impression of button being pressed.
+   * Check that the button links to index.html
+
+##### Testing JavaScript functions and logic
+1. Testing session storage data and outcomes
+    * Navigate from index.html to difficulty.html using the "PLAY WITH AUDIO" button. On difficulty.html, navigate to game.html using "EASY" button.
+    * Within the console in game.html, check session storage for "audio:'true', difficulty: 'easy'.
+    * Using the "START" button, begin the game and check that the interval between beeps is as expected.
+    * Ensure that the audio is playing.
+    * Complete 3 successful repetitions and ensure the winGame() function is called.
+    
+Repeat these tests for all difficulty settings ensuring that the session storage data is correct for each instance. Ensure that the number of repetitions to win the game and the interval between beeps is as expected. Repeat for all difficulty settings again having selected "PLAY ON MUTE" from index.html, also ensuring that no audio is triggered.
+
+2. Testing game functions (after pressing "START" button)
+    * Ensure game begins.
+    * Successfully repeat computer sequence - ensure a new round is started and that it is one beep longer than the previous round.
+    * Enter incorrect sequence - ensure that the game ends and gameOver() is called and functions correctly.
+    * Complete the game - ensure the gameWin() is called and functions correctly.
+    * Press start button before game ends and during computers turn - ensure a new game is started.
+    * Press start button before game ends and during users turn - ensure a new game is started.
+    * Press start button during winGame() and loseGame() - ensure a new game is started.
+
 
 
 ### Additional Testing
-Friends/family/slack
+In addition
 
 ### Known Bugs
 

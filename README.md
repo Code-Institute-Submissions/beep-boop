@@ -38,7 +38,7 @@ As a user of the website, I want:
 <a name="design"></a>
 ## Design
 The overall design concept of the website was to make a memory game with the aesthetic of a physical toy that may have been manufactured in the 1980's. The general idea of the game is based heavily on the game 'Simon' which was first manufactured in 1978.
-The game and all navigational features fit within a container which stays the same size as the user navigates through the website. This gives the impression of there being a solid and material object on the page. The game container features a subtle inset box shadow, used to add to the illusion of the game being a 3D object. As well as this, all buttons feature an offset box shadow which gives the impression they are elevated from the background. This box shadow effect is removed when the buttons are clicked to seem as though the button has physically moved. When the buttons found on the main game page light up, a radial gradient effect is used to make the center of the button the brightest, with the brightness slowly fading outwards. This is to suggest that there is a light bulb in the center of the button. As well as this, a box shadow effect is used to suggest that the immediate area surrounding the button is being illuminated by the button (see image below).
+The game and all navigational features fit within a container which stays the same size as the user navigates through the website. This gives the impression of there being a solid and material object on the page. The game container features a subtle inset box shadow, used to add to the illusion of the game being a 3D object. As well as this, all buttons feature an offset box shadow which gives the impression they are elevated from the background. This box shadow effect is removed when the buttons are clicked to seem as though the button has physically moved. When the buttons found on the main game page light up, a radial gradient effect is used to make the centre of the button the brightest, with the brightness slowly fading outwards. This is to suggest that there is a light bulb in the centre of the button. As well as this, a box shadow effect is used to suggest that the immediate area surrounding the button is being illuminated by the button (see image below).
 
 ![An inactive button and an illuminated button](assets/images/readme-images/buttons-comparison.jpg "An inactive button and an illuminated button")
 ### Design mock-ups
@@ -59,37 +59,37 @@ This palette was chosen as it contains 4 distinct colours that could be used for
 ### Fonts
 The font used for the 'BEEP - BOOP' logo is 'Faster One' from Google Fonts. This was used as it is a striking font, with the trailing lines alluding to speed and movement. [Click here to view logo.](assets/images/readme-images/logo.jpg)
 
-The majority of the text on the website is 'Bungee' from Google Fonts. This font was chosen as it is bold and clearly legible, as well as being somewhat reminiscent of the font used for the Pacman computer games, which suits the 80's theme of the website. The font used for the tagline 'An audio / visual memory game' is 'Bungee Shade', also from Google Fonts. [Click here to view Bungee font in use.](assets/images/readme-images/bungee-font.jpg)
+Most of the text on the website is 'Bungee' from Google Fonts. This font was chosen as it is bold and clearly legible, as well as being somewhat reminiscent of the font used for the Pacman computer games, which suits the 80's theme of the website. The font used for the tagline 'An audio / visual memory game' is 'Bungee Shade', also from Google Fonts. [Click here to view Bungee font in use.](assets/images/readme-images/bungee-font.jpg)
 
 For more verbose sections of the website, the font 'DM Mono' from Google Fonts was used as it has a vaguely digital feel to it which suits the computer game aesthetic, whilst remaining clearly legible. This font can be found in the 'How to play' modal, as well as in the descriptions of the difficulty options. [Click here to view DM mono font in use.](assets/images/readme-images/dm-mono-font.jpg)
 
-The font 'Digital-7' was used in the level display to give the effect of it being an old LCD display, similar to that found on calculators. This helped add to the illusion of the website actually being a physical toy. [Click here to view the level display.](assets/images/readme-images/level-display.jpg)
+The font 'Digital-7' was used in the level display to give the effect of it being an old LCD display, similar to that found on calculators. This helped add to the illusion of the website being a physical toy. [Click here to view the level display.](assets/images/readme-images/level-display.jpg)
 
 <a name="features"></a>
 ## Features
 ### Implemented Features
-The website features 3 separate pages (index.html, difficulty.html and game.html). Each of these pages contains a single container that holds all of the necessary elements required to navigate around the website and interact with the game. This container and its contents are responsive to the user's device viewport, and the container is always the same dimensions across the 3 pages. All navigational elements have mouse hover effects to reassure the user that they are indeed clickable links.
+The website features 3 separate pages (index.html, difficulty.html and game.html). Each of these pages contains a single container that holds all the necessary elements required to navigate around the website and interact with the game. This container and its contents are responsive to the user's device viewport, and the container is always the same dimensions across the 3 pages. All navigational elements have mouse hover effects to reassure the user that they are indeed clickable links.
 
 #### Index.html
 This is the landing page for the website. The user is immediately presented with the game logo, followed by the tagline 'An audio / visual memory game' thus establishing the purpose of the website very quickly. Below this are 3 clearly labelled buttons:
 
-PLAY WITH AUDIO (Highly recommended) - By clicking on this button, the user moves through to the next page of the website (difficulty.html). The button also sets the key/value pair of "audio : 'true'" to the user's browsers session storage. This item is then evaluated in the JavaScript code, to determine whether or not audio is triggered when playing the game. 
+PLAY WITH AUDIO (Highly recommended) - By clicking on this button, the user moves through to the next page of the website (difficulty.html). The button also sets the key/value pair of "audio: 'true'" to the user's browsers session storage. This item is then evaluated in the JavaScript code, to determine whether audio is triggered when playing the game. 
 
 PLAY ON MUTE - This functions the same way as the PLAY WITH AUDIO  button, however the key/value pair are set to "audio: 'false'".
 
 HOW TO PLAY - This button triggers a modal, which contains a short set of instructions on how to play the game. The modal can be closed either by clicking on the 'CLOSE' button, or by clicking anywhere outside of the modal body.
 
-If the session storage item is not set (ie. the user goes straight to game.html), the game defaults to audio being enabled as this is the recommended way to play the game.
+If the session storage item is not set (i.e. the user goes straight to game.html), the game defaults to audio being enabled as this is the recommended way to play the game.
 
 #### difficulty.html
 Once through to this page, the user is asked to 'SELECT DIFFICULTY' and presented with a further 3 buttons titles 'EASY', 'NORMAL' and 'HARD'. Each button is accompanied by a short description of what each difficulty option entails. Again, by clicking on one of these buttons, a session storage item is set which is later evaluated in the JavaScript code and used to determine certain factors of the user's game experience.
 
-Below these three buttons, a more subtle button is offered to return the user to the 'MAIN MENU' which links back to index.html. This ensures good UX as the user can not get 'trapped' on this page and can return to the main menu to check how to play the game or select a different audio setting.
+Below these three buttons, a more subtle button is offered to return the user to the 'MAIN MENU' which links back to index.html. This ensures good UX as the user cannot get 'trapped' on this page and can return to the main menu to check how to play the game or select a different audio setting.
 
 #### game.html
 The game.html page contains the actual game aspect of the website. Below the BEEP - BOOP logo, the user finds 4 large buttons of varying colours. These are the buttons with which the user plays game. Beneath this, is another button which links the user back to the main menu. This button is styled in the same manner as the main menu link found on difficulty.html to ensure consistency throughout the website. Next to the main menu link is a level display which initially prompts the user to 'PRESS START', and then once the game has begun displays the current level of the game. Next to this is the 'START' button which triggers the start of the game.
 
-Should the user be successful in completing the game, a success jingle is triggered and all the game buttons flash 3 times. A separate fail jingle is triggered should the user make a mistake. Both of these jingles sound like 8-bit computer game sound effects, in keeping with the 80's theme.
+Should the user be successful in completing the game, a success jingle is triggered and all the game buttons flash 3 times. A separate fail jingle is triggered should the user make a mistake. Both jingles sound like 8-bit computer game sound effects, in keeping with the 80's theme.
 
 
 #### Potential Future Features
@@ -159,7 +159,7 @@ The HTML code has been checked against the [W3C Markup Validator](https://valida
   * This requirement is met by the website by providing a memory game!
   
 * To interact with the website and gain immediate feedback from my interaction
-  * The game responds to user clicks with immediate audio and visual feedback. If the user successfully completes the game, the level display shows "YOU WIN!" and a triumphant 8-bit jingle is sounded. If however the user makes a mistake, the level display shows "GAME OVER!" and a game-over jingle sounds. The game-over jingle is reminiscent  of classic old-school arcade game game-over sounds. Outside of the game itself, all clickable links have hover effects to reassure the user that they are indeed clickable links hen the mouse is moved over them.
+  * The game responds to user clicks with immediate audio and visual feedback. If the user successfully completes the game, the level display shows "YOU WIN!" and a triumphant 8-bit jingle is sounded. If the user makes a mistake, the level display shows "GAME OVER!" and a game-over jingle sounds. The game-over jingle is reminiscent  of classic old-school arcade game game-over sounds. Outside of the game itself, all clickable links have hover effects to reassure the user that they are indeed clickable links hen the mouse is moved over them.
   
 * The game to be simple to understand and play
   * The game is a very simple concept taken from the game 'Simon'. Whilst anyone familiar  with the game 'Simon' would immediately understand how to play, even without prior knowledge the user can quickly come to understand the rules of the game due to its simple nature and audio/visual feedback.
@@ -171,7 +171,7 @@ The HTML code has been checked against the [W3C Markup Validator](https://valida
   * This option is presented to the user immediately upon loading the website. On index.html 2 buttons clearly state "PLAY WITH AUDIO" or "PLAY ON MUTE". This page (signposted as "MAIN MENU") is clearly accessible from anywhere within the website.
   
 * To be able to change the difficulty of the game to be easier or harder
-  * Having selected the audio setting, the users are presented with difficulty.html. On this page there are 3 buttons labelled "EASY", "NORMAL" and "HARD". Beneath the buttons is a short description of what each difficulty setting actually means.
+  * Having selected the audio setting, the users are presented with difficulty.html. On this page there are 3 buttons labelled "EASY", "NORMAL" and "HARD". Beneath the buttons is a short description of what each difficulty setting means.
   
 * To be able to play the game on any device
   * The website has been designed and tested with the aim of enabling the game to be played on as many devices as possible. With this in mind, the CSS code has been made as cross browser compatible as possible with the help of [Autoprefixer](https://autoprefixer.github.io/). All code has been validated through [JS Hint](https://jshint.com/) for JavaScript, [W3C's](https://www.w3.org/) CSS and HTML validators. As well as this, the pages are all highly responsive with the design being suitable for devices of around a 270px square upwards.
@@ -187,7 +187,7 @@ The tests detailed in this section were all completed using the following web br
 | iPad 7th generation 2019  | :heavy_check_mark: |                  | :heavy_check_mark: |:heavy_check_mark: |
 
 #### Index.html tests
-Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+Check that all text and buttons load with correct styles and spacing, and that the container is centred within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
 
 ###### "PLAY WITH AUDIO" button
 1. Move mouse over button 
@@ -216,7 +216,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
 
 ###### "HOW TO PLAY" modal
 1. Display the modal using the "HOW TO PLAY" button
-    * Check that the text and "CLOSE" button load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+    * Check that the text and "CLOSE" button load with correct styles and spacing, and that the container is centred within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
   
 2. Move mouse over "CLOSE" button 
     * ensure hover effect is active.
@@ -229,7 +229,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
     * Ensure the modal is successfully closed.
   
 #### Difficulty.html
-Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+Check that all text and buttons load with correct styles and spacing, and that the container is centred within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
 
 ###### "EASY" button
 1. Move mouse over button 
@@ -264,7 +264,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
    * Check that the button links to index.html
 
 #### Game.html
-Check that all text and buttons load with correct styles and spacing, and that the container is centered within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
+Check that all text and buttons load with correct styles and spacing, and that the container is centred within the page. On mobile and tablet, rotate the screen to landscape orientation and repeat the checks.
 
 For the purpose of speeding up testing, the number of beeps required to win was significantly lowered for all difficulty settings within the scripts.js file. In order to ensure the session storage was having the desired different outcomes whilst playing the game, 'Easy' mode required 3 successful repetitions, 'Normal' mode required 4 and 'Hard' mode required 5.
 
@@ -308,7 +308,7 @@ For the purpose of speeding up testing, the number of beeps required to win was 
 ##### Testing JavaScript functions and logic
 1. Testing session storage data and outcomes
     * Navigate from index.html to difficulty.html using the "PLAY WITH AUDIO" button. On difficulty.html, navigate to game.html using "EASY" button.
-    * Within the console in game.html, check session storage for "audio:'true', difficulty: 'easy'.
+    * Within the console in game.html, check session storage for "audio: 'true', difficulty: 'easy'.
     * Using the "START" button, begin the game and check that the interval between beeps is as expected.
     * Ensure that the audio is playing.
     * Complete 3 successful repetitions and ensure the winGame() function is called.

@@ -117,7 +117,7 @@ This website is written in HTML, CSS and JavaScript.
 4. [jQuery](https://www.jquery.com/)
    * jQuery is required to power certain Bootstrap features, including the index.html modal. jQuery is also used to shorten the syntax required to achieve certain functions, such as targeting HTML elements within the JavaScript file. jQuery also improves the readability of the scripts.js file
    
-5. [Google Fonts](https://www.fonts.google.com/)
+5. [Google Fonts](https://fonts.google.com/)
    * Used to provide the 'Faster One', 'Bungee', 'Bungee Shade' and 'DM Mono' fonts used throughout the website.
    
 6. [1001 Fonts](https://www.1001fonts.com/)

@@ -133,7 +133,7 @@ This website is written in HTML, CSS and JavaScript.
    * Used to ensure cross browser validity for CSS.
    
 10. [Am I Responsive?](http://ami.responsivedesign.is/)
-    * Used to create mock-ups found at the top of this README.
+    * Used to test for responsive design and to create mock-ups found at the top of this README.
    
 11. [Audacity](https://www.audacityteam.org/)
     * Used to edit all the audio found on the website.
@@ -152,8 +152,6 @@ This website is written in HTML, CSS and JavaScript.
     
 <a name="testing"></a>
 ## Testing
-The HTML code has been checked against the [W3C Markup Validator](https://validator.w3.org/), the CSS against the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the JavaScript against the [JS Hint](https://jshint.com/) code analysis tool, with any issues highlighted by the validators fixed. The code contains no validity issues.
-
 ### Testing against user requirements (as listed in UX section)
 * To play a memory game
   * This requirement is met by the website by providing a memory game!
@@ -175,6 +173,12 @@ The HTML code has been checked against the [W3C Markup Validator](https://valida
   
 * To be able to play the game on any device
   * The website has been designed and tested with the aim of enabling the game to be played on as many devices as possible. With this in mind, the CSS code has been made as cross browser compatible as possible with the help of [Autoprefixer](https://autoprefixer.github.io/). All code has been validated through [JS Hint](https://jshint.com/) for JavaScript, [W3C's](https://www.w3.org/) CSS and HTML validators. As well as this, the pages are all highly responsive with the design being suitable for devices of around a 270px square upwards.
+
+### Validation
+The HTML code has been checked against the [W3C Markup Validator](https://validator.w3.org/), the CSS against the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the JavaScript against the [JS Hint](https://jshint.com/) code analysis tool, with any issues highlighted by the validators fixed. The code contains no validity issues.
+
+### Responsive testing
+The website has been developed and tested to ensure a high level of responsiveness. This has been achieved using Google Chrome Dev Tools, testing on different physical devices and by viewing the site on [Am I Responsive?](http://ami.responsivedesign.is/).
 
 ### Manual testing of all elements throughout the website
 The tests detailed in this section were all completed using the following web browsers and hardware:

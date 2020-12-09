@@ -66,7 +66,6 @@ blueBtn.click(blue);
    
 /* GAME FUNCTIONS
 Start of new game */
-
 /* If the winGame or loseGame function is running, wait until it has finished before starting new game */
 function checkFirstGame(){
     if (startGameDelay === false){
@@ -84,7 +83,6 @@ function startGame(){
     compCount = 0;
     userCount = 0;
     level = 1;
-    /* Check session storage for difficulty value. If 'normal' or no session storage data found, use default. */
     switch (difficulty){ 
         case "easy":
             speed = 800;
@@ -94,6 +92,7 @@ function startGame(){
             speed = 500;
             winLimit = 25;
             break;
+        case "normal":
         default:
             speed = 600;
             winLimit = 20;
@@ -107,7 +106,7 @@ function startGame(){
     intervalID = setInterval(compPlay, speed);
 }
 
-/* Computers turn */
+/* COMPUTER TURN */
 function compPlay(){
     /* Prevent user clicking game buttons */
     userTurn = false;
@@ -119,7 +118,7 @@ function compPlay(){
         clearInterval(intervalID);
         userTurn = true;
     }
-    /* If userTurn is not true, check the compOrder array at the index of the compCount value and 
+    /* Check the compOrder array at the index of the compCount value and 
     call the associated avOutputs function. */
     if(!userTurn){
         if(compOrder[compCount] === 1){
@@ -145,7 +144,6 @@ function avOutputs(btnVar, btnColorString , audioSample){
     setTimeout(function(){
         btnVar.removeClass(btnColorString + "-active").addClass(btnColorString);
     }, 200);
-    /* If 'audio' holds the value 'true' in session storage, play associated audio */
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         audioSample.play();
     }
@@ -205,10 +203,10 @@ function checkOrder(){
         loseGame();
         return;
     }
-    /* If the length of the userOrder array is the same value as userCount, it is no longer the users turn */
+    /* If the length of the userOrder array is the same value as level, it is no longer the users turn */
     if(userOrder.length === level){
         userTurn = false;
-        /* If the current level is the same as the winLimit variable, the user has won, else the level increases
+        /* If the current level is the same as the winLimit variable, the user has won. Else the level increases
         by 1 and the game continues */
         if(level === winLimit){
             winGame();
@@ -269,7 +267,6 @@ let loseGame = () => {
 
 }
 
-
 /* Remove normal CSS class on game buttons, and add 'lit up' CSS class. Wait .8 seconds before
 reverting back to normal CSS */
 function flashLights(){
@@ -291,3 +288,4 @@ function flashLights(){
     }, 800);
 
 }
+

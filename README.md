@@ -114,7 +114,7 @@ This website is written in HTML, CSS and JavaScript.
    * Used to store the code after being 'committed' and 'pushed' using Git. The website is now hosted via GitHub pages.
    
 3. [Bootstrap](https://www.getbootstrap.com/)
-   * Used to create structure and some styling, as well as some responsive aspects of the website. Also, the modal found on index.html is powered by Bootstrap code.
+   * Used to create structure and some styling, as well as some responsive aspects of the website. Also, the modals found on index.html and game.html are powered by Bootstrap code.
    
 4. [jQuery](https://www.jquery.com/)
    * jQuery is required to power certain Bootstrap features, including the index.html modal. jQuery is also used to shorten the syntax required to achieve certain functions, such as targeting HTML elements within the JavaScript file. jQuery also improves the readability of the scripts.js file
@@ -430,7 +430,7 @@ If you wish to clone the repository to work on locally, follow these steps:
 
 ### Code
 * [Bootstrap](https://www.getbootstrap.com/) code used for:
-  * Modal on index.html
+  * Modals on index.html and game.html
   * Responsive grid layout
   * Some CSS styling and hover effects
   

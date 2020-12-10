@@ -165,6 +165,10 @@ button {
     margin-top: 5px;
 }
 
+.win-lose-modal p {
+    font-size: 0.8rem;
+}
+
 /*--------------------------------------------------404.HTML--*/
 .page-not-found h1 {
     font-size: 1.5rem;
@@ -286,6 +290,9 @@ button {
     .level-screen {
         font-size: 1rem;  
     }
+    .win-lose-modal p {
+    font-size: 1rem;
+    }
     .page-not-found h1 {
         font-size: 2rem;
     }
@@ -365,6 +372,9 @@ button {
     .level-screen {
         font-size: 1.5rem;  
     }
+    .win-lose-modal h4 {
+    font-size: 2rem;
+    }
     .page-not-found h1 {
         font-size: 3rem;
     }
@@ -397,5 +407,8 @@ button {
     }
     #recommended {
         font-size: 1.2rem;
+    }
+    .win-lose-modal h4 {
+    font-size: 2rem;
     }
 }

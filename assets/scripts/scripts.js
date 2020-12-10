@@ -160,7 +160,7 @@ function red(){
     userCount++;
     checkOrder();
     } else if (!userTurn && blockButtons){
-        levelDisplay.text("Please Wait")
+        levelDisplay.text("Please Wait");
     }
 }
 
@@ -171,7 +171,7 @@ function green(){
     userCount++;
     checkOrder();
     } else if (!userTurn && blockButtons){
-        levelDisplay.text("Please Wait")
+        levelDisplay.text("Please Wait");
     }
 }
 
@@ -182,7 +182,7 @@ function orange(){
     userCount++;
     checkOrder();
     } else if (!userTurn && blockButtons){
-        levelDisplay.text("Please Wait")
+        levelDisplay.text("Please Wait");
     }
 }
 
@@ -193,7 +193,7 @@ function blue(){
     userCount++;
     checkOrder();
     } else if (!userTurn && blockButtons){
-        levelDisplay.text("Please Wait")
+        levelDisplay.text("Please Wait");
     }
 }
 
@@ -249,7 +249,7 @@ let winGame = () => {
             gameWinJingle.play();
         }, 500);
     }
-}
+};
 /* This functions in the same way as winGame() */
 let loseGame = () => {
     startGameSafe = false;
@@ -269,8 +269,7 @@ let loseGame = () => {
             gameFailJingle.play();
         }, 500);
     }
-
-}
+};
 
 /* Remove normal CSS class on game buttons, and add 'lit up' CSS class. Wait .8 seconds before
 reverting back to normal CSS */
@@ -300,7 +299,8 @@ function loseModal(){
         $("#lose-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">lower&nbspthe&nbspdifficulty?</a></p>
                                  <p>Otherwise, hit close and try again!</p>`);
     } else {
-        $("#lose-summary").html("<p>Want another attempt to beat BEEP - BOOP?</p><p>Hit close and try again!</p>")
+        $("#lose-summary").html(`<p>Want another attempt to beat BEEP - BOOP?</p>
+                                <p>Hit close and try again!</p>`);
     }
 }
 
@@ -310,7 +310,9 @@ function winModal(){
         $("#win-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">raise the difficulty?</a></p>
                                 <p>Otherwise, hit close and play again!</p>`);
     } else {
-        $("#win-summary").html(`<p>INCREDIBLE! And on the hardest difficulty!</p><p>You are a BEEP - BOOP champion!</p>
+        $("#win-summary").html(`<p>INCREDIBLE!</p> 
+                                <p>And on the hardest difficulty!</p>
+                                <p>You are a BEEP - BOOP champion!</p>
                                 <p>Hit close and play again!</p>`);
     }
 }

@@ -86,7 +86,7 @@ button {
 
 /*-------------------------------------------------INDEX.HTML--*/
 .tagline {
-    font-family: 'Bungee Shade', "Lucida Console", monospace;
+    font-family: Bungee, "Lucida Console", monospace;
     font-size: 0.7rem;
     letter-spacing: 1px;
 }
@@ -268,6 +268,7 @@ button {
         font-size: 1.6rem;
     }
     .tagline {
+        font-family: 'Bungee Shade', "Lucida Console", monospace;
         font-size: 0.8rem;
     }
     .select-difficulty {

@@ -13,7 +13,7 @@
 
 [Languages and Technologies](#tech)
 
-[Testing](testing.md) (links to separate page)
+[Testing](TESTING.md) (links to separate page)
 
 [Deployment](#deployment)
 
@@ -154,7 +154,7 @@ This website is written in HTML, CSS and JavaScript.
     
 <a name="testing"></a>
 ## Testing
-[Please click here for testing documentation](testing.md)
+[Please click here for testing documentation](TESTING.md)
 
 <a name="deployment"></a>
 ## Deployment

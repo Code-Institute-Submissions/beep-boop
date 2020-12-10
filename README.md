@@ -311,6 +311,49 @@ For the purpose of speeding up testing, the number of beeps required to win was 
    * Check that the box shadow effect is removed to give impression of button being pressed.
    * Check that the button links to **index.html**.
 
+##### Win game modal
+1. Move mouse over button 
+   * ensure hover effect is active.
+   
+2. Move mouse over link 
+   * ensure hover effect is active.
+   
+3. Win a game on easy or normal difficulty
+    * Ensure the **"YOU WIN"** modal is triggered
+    * On the modal, ensure link to **difficulty.html** is presented.
+    
+4. Win a game on hard difficulty
+    * Ensure the **"YOU WIN"** modal is triggered
+    * On the modal, ensure the "Congratulations..." text is presented.
+    
+5. Click on the **"CLOSE"** button
+    * Check that the box shadow effect is removed to give impression of button being pressed
+    * Ensure the modal is successfully closed.
+  
+6. With the modal visible, click outside of modal body
+    * Ensure the modal is successfully closed.
+
+##### Lose game modal
+1. Move mouse over button 
+   * ensure hover effect is active.
+   
+2. Move mouse over link 
+   * ensure hover effect is active.
+   
+3. Lose a game on normal or hard difficulty
+    * Ensure the **"YOU LOST"** modal is triggered
+    * On the modal, ensure link to **difficulty.html** is presented.
+    
+4. Lose a game on easy difficulty
+    * Ensure the **"YOU LOST"** modal is triggered
+    
+5. Click on the **"CLOSE"** button
+    * Check that the box shadow effect is removed to give impression of button being pressed
+    * Ensure the modal is successfully closed.
+  
+6. With the modal visible, click outside of modal body
+    * Ensure the modal is successfully closed.
+    
 ##### Testing JavaScript functions and logic
 1. Testing session storage data and outcomes
     * Navigate from **index.html** to **difficulty.html** using the **"PLAY WITH AUDIO"** button. On **difficulty.html**, navigate to **game.html** using **"EASY"** button.

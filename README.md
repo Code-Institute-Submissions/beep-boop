@@ -369,18 +369,16 @@ Repeat these tests for all difficulty settings ensuring that the session storage
     * Successfully repeat computer sequence - ensure a new round is started and that it is one beep longer than the previous round.
     * Enter incorrect sequence - ensure that the game ends and **gameOver()** is called and functions correctly.
     * Complete the game - ensure the **gameWin()** is called and functions correctly.
-    * Press **'START'** button before game ends and during computers turn - ensure a new game is started.
+    * Press **'START'** button before game ends and during computers turn - ensure a new game is not started and the level display states "PLEASE WAIT".
     * Press **'START'** button before game ends and during users turn - ensure a new game is started.
-    * Press **'START'** button during **winGame()** and **loseGame()** - ensure a new game is started.
-
-
+    * Press **'START'** button during **winGame()** and **loseGame()** - ensure a new game is not started and the level display states "PLEASE WAIT".
 
 ### Additional Testing
 * Friends and family asked to visit the website and report on any bugs or UX issues - no undocumented issues have been found.
 * Website posted to 'Peer Code Review' on the Code Institute Slack channel.
 
-### Known Bugs
-At present, there is an issue if the user clicks on the **'START'** button whilst the **compPlay()** function is still being called by **setInterval()**. The **setInterval()** methods fails to be cleared by the **interval ID** and therefore **compPlay()** gets stuck in a loop. I have not yet found a fix for this issue. The same issue occurs if the **"START"** button is clicked rapidly at the start of a game.
+### Found Bugs
+During testing, a bug was found where if the user clicks on the **'START'** button whilst the **compPlay()** function is still being called by **setInterval()**. The **setInterval()** methods fails to be cleared by the **interval ID** and therefore **compPlay()** gets stuck in a loop. To fix this issue, the **START** button only triggers a new game once the **setInterval()** method has been cleared. This means that a new game cannot be started whilst the **compPlay()** function is running. Instead, the level display tells the user to 'PLEASE WAIT' until the **START** button becomes functional again once the compPlay() function has stopped.
 
 <a name="deployment"></a>
 ## Deployment

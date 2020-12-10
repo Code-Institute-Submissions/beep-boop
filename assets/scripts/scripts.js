@@ -90,7 +90,7 @@ function startGame(){
             break;
         case "hard":
             speed = 500;
-            winLimit = 25;
+            winLimit = 2;
             break;
         case "normal":
         default:
@@ -233,13 +233,14 @@ let winGame = () => {
     let clearFlash = setInterval(flashLights, 1600);
     userTurn = false;
     levelDisplay.text("You win!");
-    /* Wait 4 seconds, the length of 2.5 rounds of flashLights() before clearing interval and setting
+    /* Wait 3.1 seconds, just under 3 rounds of flashLights() before clearing interval and setting
     level display to 'Press Start'. Set startGameDelay to false to allow a new game to be started */
     setTimeout(function(){
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
         startGameDelay = false;
-    }, 4000);
+        winModal();
+    }, 3100);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         setTimeout(function(){
             gameWinJingle.play();
@@ -258,7 +259,8 @@ let loseGame = () => {
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
         startGameDelay = false;
-    }, 4000);
+        loseModal();
+    }, 3100);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
         setTimeout(function(){
             gameFailJingle.play();
@@ -286,6 +288,26 @@ function flashLights(){
     setTimeout(function(){
     blueBtn.removeClass("btn-blue" + "-active").addClass("btn-blue");
     }, 800);
-
 }
 
+function loseModal(){
+    $("#lose-modal").modal();
+    $("#lose-modal-level").text(`level ${level}`);
+    if (difficulty === "normal" || difficulty === "hard") {
+        $("#lose-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">lower the difficulty?</a></p>
+                                 <p>Otherwise, hit close and try again!</p>`);
+    } else {
+        $("#lose-summary").html("<p>Want another attempt to beat BEEP - BOOP?</p><p>Hit close and try again!</p>")
+    }
+}
+
+function winModal(){
+    $("#win-modal").modal();
+    if (difficulty === "easy" || difficulty ==="normal"){
+        $("#win-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">raise the difficulty?</a></p>
+                                <p>Otherwise, hit close and play again!</p>`);
+    } else {
+        $("#win-summary").html(`<p>INCREDIBLE! And on the hardest difficulty!</p><p>You are a BEEP - BOOP champion!</p>
+                                <p>Hit close and play again!</p>`);
+    }
+}

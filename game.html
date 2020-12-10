@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body class="d-flex align-items-center h-100">
+<!-- WIN MODAL CODE - FROM BOOTSTRAP -->
     <div class="modal fade modal-bg" id="win-modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content modal-container">
@@ -26,14 +27,15 @@
             </div>
         </div>
     </div>
+<!-- LOSE MODAL CODE - FROM BOOTSTRAP -->
     <div class="modal fade modal-bg" id="lose-modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content modal-container">
                 <div class="modal-body how-to-play text-center">
                     <h4 class="header">You Lost!!</h4>
-                    <div id="lose-summary" class="text">
-                        <p>You made it to level <span id="lose-modal-level"></span></p>                        
-                    </div>
+                    <p class="text">You made it to <span id="lose-modal-level" class="font-weight-bold text-uppercase">
+                    </span></p> 
+                    <div id="lose-summary" class="text"></div>                
                     <button type="button" class="btn option-btn btn-blue" data-dismiss="modal">Close</button>
                 </div>
             </div>

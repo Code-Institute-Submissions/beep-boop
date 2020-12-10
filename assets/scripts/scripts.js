@@ -32,7 +32,7 @@ let speed;
 let winLimit;
 let intervalID;
 let levelDisplay = $("#level");
-let startGameDelay = false;
+let startGameSafe = true;
 let blockButtons = false;
 
 /* USER CLICK HANDLERS
@@ -68,7 +68,7 @@ blueBtn.click(blue);
 Start of new game */
 /* If the winGame or loseGame function is running, wait until it has finished before starting new game */
 function checkFirstGame(){
-    if (startGameDelay === false){
+    if (startGameSafe === true){
         startGame();
     } else {
         levelDisplay.text("Please Wait");
@@ -76,6 +76,7 @@ function checkFirstGame(){
 }
 function startGame(){
     levelDisplay.text("LEVEL : 1");
+    startGameSafe = false;
     compOrder = [];
     userOrder = [];
     blockButtons = true;
@@ -117,6 +118,7 @@ function compPlay(){
         levelDisplay.text(`LEVEL : ${level}`);
         clearInterval(intervalID);
         userTurn = true;
+        startGameSafe = true;
     }
     /* Check the compOrder array at the index of the compCount value and 
     call the associated avOutputs function. */
@@ -214,6 +216,7 @@ function checkOrder(){
             level++;
             userOrder = [];
             userCount = 0;
+            startGameSafe = false;
             levelDisplay.text(`LEVEL : ${level}`);
             setTimeout(function(){
                 intervalID = setInterval(compPlay, speed);
@@ -224,7 +227,7 @@ function checkOrder(){
 
 let winGame = () => {
     /* If true, this add a delay to a new game being started to allow time for the animation to run */
-    startGameDelay = true;
+    startGameSafe = false;
     blockButtons = false;
     /* Wait 0.2 seconds before calling flashLights() to allow avOutputs() to finish */
     setTimeout(flashLights, 200);
@@ -238,7 +241,7 @@ let winGame = () => {
     setTimeout(function(){
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
-        startGameDelay = false;
+        startGameSafe = true;
         winModal();
     }, 3100);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
@@ -249,7 +252,7 @@ let winGame = () => {
 }
 /* This functions in the same way as winGame() */
 let loseGame = () => {
-    startGameDelay = true;
+    startGameSafe = false;
     blockButtons = false;
     setTimeout(flashLights, 200);
     let clearFlash = setInterval(flashLights, 1600);
@@ -258,7 +261,7 @@ let loseGame = () => {
     setTimeout(function(){
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
-        startGameDelay = false;
+        startGameSafe = true;
         loseModal();
     }, 3100);
     if(sessionStorage.audio === "true" || !sessionStorage.audio){
@@ -294,7 +297,7 @@ function loseModal(){
     $("#lose-modal").modal();
     $("#lose-modal-level").text(`level ${level}`);
     if (difficulty === "normal" || difficulty === "hard") {
-        $("#lose-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">lower the difficulty?</a></p>
+        $("#lose-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">lower&nbspthe&nbspdifficulty?</a></p>
                                  <p>Otherwise, hit close and try again!</p>`);
     } else {
         $("#lose-summary").html("<p>Want another attempt to beat BEEP - BOOP?</p><p>Hit close and try again!</p>")

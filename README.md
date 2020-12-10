@@ -2,7 +2,7 @@
 
 # Beep - Boop
 ### An audio / visual memory game
-
+[Click here to view live website](https://richardthorp.github.io/beep-boop/index.html)
 ## Table of Contents
 
 [User Experience - UX](#UX)

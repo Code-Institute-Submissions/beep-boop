@@ -165,6 +165,16 @@ button {
     margin-top: 5px;
 }
 
+/*--------------------------------------------------404.HTML--*/
+.page-not-found h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.page-not-found h3 {
+    font-size: 1rem;
+}
+
 /*----------------------------------------------------COLORS--*/
 .game-yellow {
     background-color: #FFE922;
@@ -275,6 +285,12 @@ button {
     .level-screen {
         font-size: 1rem;  
     }
+    .page-not-found h1 {
+        font-size: 2rem;
+    }
+    .page-not-found h3, .page-not-found a {
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 440px) and (min-height:800px){
@@ -348,6 +364,12 @@ button {
     .level-screen {
         font-size: 1.5rem;  
     }
+    .page-not-found h1 {
+        font-size: 3rem;
+    }
+    .page-not-found h3, .page-not-found a {
+        font-size: 2.5rem;
+    }    
 }
 
 @media (min-height: 992px) and (min-width: 992px){

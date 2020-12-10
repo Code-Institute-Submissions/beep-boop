@@ -91,6 +91,8 @@ The **game.html** page contains the actual game aspect of the website. Below the
 
 Should the user be successful in completing the game, a success jingle is triggered and all the game buttons flash 3 times. A separate fail jingle is triggered should the user make a mistake. Both jingles sound like 8-bit computer game sound effects, in keeping with the 80's theme.
 
+#### 404.html
+The **404.html** page is a custom 404 error response page should the user mis-type the URL. The page informs the user "There is no BEEP - BOOP here!" and provides a link to the main menu (index.html).
 
 #### Potential Future Features
 I think that the game and its features are best kept simple, however in the future I may look at adding 'lives' to the game that allow the user to replay a level without starting from level 1 should they make a mistake. The number of lives allowed could change depending on the difficulty level chosen by the user.

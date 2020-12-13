@@ -36,26 +36,26 @@ let startGameSafe = true;
 let blockButtons = false;
 
 /* USER CLICK HANDLERS
-Set session storage */ 
-withAudio.click(function(){
+Set session storage */
+withAudio.click(function () {
     sessionStorage.setItem("audio", "true");
-    });
+});
 
-onMute.click(function(){
+onMute.click(function () {
     sessionStorage.setItem("audio", "false");
-    });
+});
 
-easy.click(function(){
+easy.click(function () {
     sessionStorage.setItem("difficulty", "easy");
-    });
+});
 
-normal.click(function(){
+normal.click(function () {
     sessionStorage.setItem("difficulty", "normal");
-    });
-    
-hard.click(function(){
+});
+
+hard.click(function () {
     sessionStorage.setItem("difficulty", "hard");
-    });
+});
 
 /* Game button click handlers */
 startBtn.click(checkFirstGame);
@@ -63,18 +63,18 @@ redBtn.click(red);
 greenBtn.click(green);
 orangeBtn.click(orange);
 blueBtn.click(blue);
-   
+
 /* GAME FUNCTIONS
 Start of new game */
 /* If the winGame or loseGame function is running, wait until it has finished before starting new game */
-function checkFirstGame(){
-    if (startGameSafe === true){
+function checkFirstGame() {
+    if (startGameSafe === true) {
         startGame();
     } else {
         levelDisplay.text("Please Wait");
     }
 }
-function startGame(){
+function startGame() {
     levelDisplay.text("LEVEL : 1");
     startGameSafe = false;
     compOrder = [];
@@ -84,7 +84,7 @@ function startGame(){
     compCount = 0;
     userCount = 0;
     level = 1;
-    switch (difficulty){ 
+    switch (difficulty) {
         case "easy":
             speed = 800;
             winLimit = 15;
@@ -100,20 +100,20 @@ function startGame(){
     }
     /* Get random array of numbers between 1 - 4 to decide computer order. The length of the array is set by the winLimit 
     variable assigned in the switch statement above. */
-    for (let i = 0; i < winLimit; i++){
-        compOrder.push(Math.floor(Math.random()* 4 + 1));
+    for (let i = 0; i < winLimit; i++) {
+        compOrder.push(Math.floor(Math.random() * 4 + 1));
     }
     /* Starts the game by repeatedly calling CompPlay() with interval assigned to speed variable in switch statement above. */
     intervalID = setInterval(compPlay, speed);
 }
 
 /* COMPUTER TURN */
-function compPlay(){
+function compPlay() {
     /* Prevent user clicking game buttons */
     userTurn = false;
     /* If the game has flashed and beeped the same number of times as the current level, reset the compCount variable, stop
-    the setInterval method and set userTurn to true to allow the user the click on the game buttons. */ 
-    if(compCount === level){
+    the setInterval method and set userTurn to true to allow the user the click on the game buttons. */
+    if (compCount === level) {
         compCount = 0;
         levelDisplay.text(`LEVEL : ${level}`);
         clearInterval(intervalID);
@@ -122,17 +122,17 @@ function compPlay(){
     }
     /* Check the compOrder array at the index of the compCount value and 
     call the associated avOutputs function. */
-    if(!userTurn){
-        if(compOrder[compCount] === 1){
+    if (!userTurn) {
+        if (compOrder[compCount] === 1) {
             avOutputs(redBtn, "btn-red", redAudio);
         }
-        if(compOrder[compCount] === 2){
+        if (compOrder[compCount] === 2) {
             avOutputs(greenBtn, "btn-green", greenAudio);
         }
-        if(compOrder[compCount] === 3){
+        if (compOrder[compCount] === 3) {
             avOutputs(orangeBtn, "btn-orange", orangeAudio);
         }
-        if(compOrder[compCount] === 4){
+        if (compOrder[compCount] === 4) {
             avOutputs(blueBtn, "btn-blue", blueAudio);
         }
         /* Increase compCount variable by one in order to iterate through the compOrder array */
@@ -141,76 +141,76 @@ function compPlay(){
 }
 
 /* Trigger appropriate CSS classes and audio files */
-function avOutputs(btnVar, btnColorString , audioSample){
+function avOutputs(btnVar, btnColorString, audioSample) {
     btnVar.removeClass(btnColorString).addClass(btnColorString + "-active");
-    setTimeout(function(){
+    setTimeout(function () {
         btnVar.removeClass(btnColorString + "-active").addClass(btnColorString);
     }, 200);
-    if(sessionStorage.audio === "true" || !sessionStorage.audio){
+    if (sessionStorage.audio === "true" || !sessionStorage.audio) {
         audioSample.play();
     }
 
 }
 
 /* Trigger AV and push number to userOrder array. These functions are triggered by a user click. */
-function red(){
-    if(userTurn === true){
-    userOrder.push(1);
-    avOutputs(redBtn, "btn-red", redAudio);
-    userCount++;
-    checkOrder();
-    } else if (!userTurn && blockButtons){
+function red() {
+    if (userTurn === true) {
+        userOrder.push(1);
+        avOutputs(redBtn, "btn-red", redAudio);
+        userCount++;
+        checkOrder();
+    } else if (!userTurn && blockButtons) {
         levelDisplay.text("Please Wait");
     }
 }
 
-function green(){
-    if(userTurn === true){
-    userOrder.push(2);
-    avOutputs(greenBtn, "btn-green", greenAudio);
-    userCount++;
-    checkOrder();
-    } else if (!userTurn && blockButtons){
+function green() {
+    if (userTurn === true) {
+        userOrder.push(2);
+        avOutputs(greenBtn, "btn-green", greenAudio);
+        userCount++;
+        checkOrder();
+    } else if (!userTurn && blockButtons) {
         levelDisplay.text("Please Wait");
     }
 }
 
-function orange(){
-    if(userTurn === true){
-    userOrder.push(3);
-    avOutputs(orangeBtn, "btn-orange", orangeAudio);
-    userCount++;
-    checkOrder();
-    } else if (!userTurn && blockButtons){
+function orange() {
+    if (userTurn === true) {
+        userOrder.push(3);
+        avOutputs(orangeBtn, "btn-orange", orangeAudio);
+        userCount++;
+        checkOrder();
+    } else if (!userTurn && blockButtons) {
         levelDisplay.text("Please Wait");
     }
 }
 
-function blue(){
-    if(userTurn === true){
-    userOrder.push(4);
-    avOutputs(blueBtn, "btn-blue", blueAudio);
-    userCount++;
-    checkOrder();
-    } else if (!userTurn && blockButtons){
+function blue() {
+    if (userTurn === true) {
+        userOrder.push(4);
+        avOutputs(blueBtn, "btn-blue", blueAudio);
+        userCount++;
+        checkOrder();
+    } else if (!userTurn && blockButtons) {
         levelDisplay.text("Please Wait");
     }
 }
 
 /* Check the user input with the compOrder array to determine whether the game is lost, won or not yet finished */
-function checkOrder(){
+function checkOrder() {
     /* If the last value that was pushed to the userOrder array is not equal to the compOrder array at the same 
     index, the user has lost and the game is over */
-    if(userOrder[userCount - 1] !== compOrder[userCount - 1]){
+    if (userOrder[userCount - 1] !== compOrder[userCount - 1]) {
         loseGame();
         return;
     }
     /* If the length of the userOrder array is the same value as level, it is no longer the users turn */
-    if(userOrder.length === level){
+    if (userOrder.length === level) {
         userTurn = false;
         /* If the current level is the same as the winLimit variable, the user has won. Else the level increases
         by 1 and the game continues */
-        if(level === winLimit){
+        if (level === winLimit) {
             winGame();
         } else {
             level++;
@@ -218,14 +218,14 @@ function checkOrder(){
             userCount = 0;
             startGameSafe = false;
             levelDisplay.text(`LEVEL : ${level}`);
-            setTimeout(function(){
+            setTimeout(function () {
                 intervalID = setInterval(compPlay, speed);
             }, 1000);
         }
     }
 }
 
-let winGame = () => {
+function winGame() {
     /* If true, this add a delay to a new game being started to allow time for the animation to run */
     startGameSafe = false;
     blockButtons = false;
@@ -238,34 +238,34 @@ let winGame = () => {
     levelDisplay.text("You win!");
     /* Wait 3.1 seconds, just under 3 rounds of flashLights() before clearing interval and setting
     level display to 'Press Start'. Set startGameDelay to false to allow a new game to be started */
-    setTimeout(function(){
+    setTimeout(function () {
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
         startGameSafe = true;
         winModal();
     }, 3100);
-    if(sessionStorage.audio === "true" || !sessionStorage.audio){
-        setTimeout(function(){
+    if (sessionStorage.audio === "true" || !sessionStorage.audio) {
+        setTimeout(function () {
             gameWinJingle.play();
         }, 500);
     }
 };
 /* This functions in the same way as winGame() */
-let loseGame = () => {
+function loseGame() {
     startGameSafe = false;
     blockButtons = false;
     setTimeout(flashLights, 200);
     let clearFlash = setInterval(flashLights, 1600);
     userTurn = false;
     levelDisplay.text("Game over!");
-    setTimeout(function(){
+    setTimeout(function () {
         clearInterval(clearFlash);
         levelDisplay.text("Press start");
         startGameSafe = true;
         loseModal();
     }, 3100);
-    if(sessionStorage.audio === "true" || !sessionStorage.audio){
-        setTimeout(function(){
+    if (sessionStorage.audio === "true" || !sessionStorage.audio) {
+        setTimeout(function () {
             gameFailJingle.play();
         }, 500);
     }
@@ -273,26 +273,26 @@ let loseGame = () => {
 
 /* Remove normal CSS class on game buttons, and add 'lit up' CSS class. Wait .8 seconds before
 reverting back to normal CSS */
-function flashLights(){
+function flashLights() {
     redBtn.removeClass("btn-red").addClass("btn-red" + "-active");
-    setTimeout(function(){
-    redBtn.removeClass("btn-red" + "-active").addClass("btn-red");
+    setTimeout(function () {
+        redBtn.removeClass("btn-red" + "-active").addClass("btn-red");
     }, 800);
     greenBtn.removeClass("btn-green").addClass("btn-green" + "-active");
-    setTimeout(function(){
-    greenBtn.removeClass("btn-green" + "-active").addClass("btn-green");
+    setTimeout(function () {
+        greenBtn.removeClass("btn-green" + "-active").addClass("btn-green");
     }, 800);
     orangeBtn.removeClass("btn-orange").addClass("btn-orange" + "-active");
-    setTimeout(function(){
-    orangeBtn.removeClass("btn-orange" + "-active").addClass("btn-orange");
+    setTimeout(function () {
+        orangeBtn.removeClass("btn-orange" + "-active").addClass("btn-orange");
     }, 800);
     blueBtn.removeClass("btn-blue").addClass("btn-blue" + "-active");
-    setTimeout(function(){
-    blueBtn.removeClass("btn-blue" + "-active").addClass("btn-blue");
+    setTimeout(function () {
+        blueBtn.removeClass("btn-blue" + "-active").addClass("btn-blue");
     }, 800);
 }
 
-function loseModal(){
+function loseModal() {
     $("#lose-modal").modal();
     $("#lose-modal-level").text(`level ${level}`);
     if (difficulty === "normal" || difficulty === "hard") {
@@ -304,9 +304,9 @@ function loseModal(){
     }
 }
 
-function winModal(){
+function winModal() {
     $("#win-modal").modal();
-    if (difficulty === "easy" || difficulty ==="normal"){
+    if (difficulty === "easy" || difficulty === "normal") {
         $("#win-summary").html(`<p>Would you like to <a href="difficulty.html" class="header">raise the difficulty?</a></p>
                                 <p>Otherwise, hit close and play again!</p>`);
     } else {

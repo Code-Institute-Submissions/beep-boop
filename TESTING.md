@@ -12,10 +12,10 @@ The game responds to user clicks with immediate audio and visual feedback. If th
 
 ![Screenshot of a lost game](assets/images/readme-images/lose-game-screenshot.jpg "Screenshot of a lost game and lost game modal")
 
-If the user makes a mistake, the level display shows **"GAME OVER!"** and a game-over jingle sounds. The game-over jingle is reminiscent  of classic old-school arcade game game-over sounds. Following this, a modal pops up to say the game is over, inform the user of which level they reached, and if played on easy or normal difficulty, suggests playing the game on an easier difficulty with a link to difficulty.html. 
+If the user makes a mistake, the level display shows **"GAME OVER!"** and a game-over jingle sounds. The game-over jingle is reminiscent  of classic old-school arcade game game-over sounds. Following this, a modal pops up to say the game is over, inform the user of which level they reached, and if played on normal or hard difficulty, suggests playing the game on an easier difficulty with a link to difficulty.html. 
   
 ### The game to be simple to understand and play
-The game is a very simple concept taken from the game 'Simon'. Whilst anyone familiar  with the game 'Simon' would immediately understand how to play, even without prior knowledge the user can quickly come to understand the rules of the game due to its simple nature and audio/visual feedback.
+The game is based on a very simple concept taken from the game 'Simon'. Whilst anyone familiar  with the game 'Simon' would immediately understand how to play, even without prior knowledge the user can quickly come to understand the rules of the game due to its simple nature and audio/visual feedback.
   
 ### To be able to read the game instructions should I need them
 ![Screenshot with 'HOW TO PLAY' highlighted](assets/images/readme-images/how-to-play-screenshot.jpg "Screenshot with 'HOW TO PLAY' highlighted")
@@ -25,7 +25,7 @@ Should the user not understand the game, there is a clear **"HOW TO PLAY"** butt
 ### To be able to play the game with or without sounds
 ![Screenshot with audio options highlighted](assets/images/readme-images/audio-screenshot.jpg "Screenshot with audio options highlighted")
 
-This option is presented to the user immediately upon loading the website. On **index.html** 2 buttons clearly state **"PLAY WITH AUDIO"** or **"PLAY ON MUTE"**. This page (signposted as **"MAIN MENU"**) is clearly accessible from anywhere within the website.
+This option is presented to the user immediately upon loading the website. On **index.html**, 2 buttons clearly state **"PLAY WITH AUDIO"** or **"PLAY ON MUTE"**. This page (signposted as **"MAIN MENU"**) is clearly accessible from anywhere within the website.
   
 ### To be able to change the difficulty of the game to be easier or harder
 ![Screenshot of the difficulty selection page](assets/images/readme-images/difficulty-screenshot.jpg "Screenshot of the difficulty selection page")
@@ -103,6 +103,7 @@ Check that all text and buttons load with correct styles and spacing, and that t
 2. Click on the button
    * Check that the box shadow effect is removed to give impression of button being pressed.
     * Within the console, check that **"difficulty: 'easy'"** is saved to session storage.
+    * Check that button links to **game.html**.
   
 #### "NORMAL" button
 1. Move mouse over button 
@@ -111,6 +112,8 @@ Check that all text and buttons load with correct styles and spacing, and that t
 2. Click on the button
     * Check that the box shadow effect is removed to give impression of button being pressed.
     * Within the console, check that **"difficulty: 'normal'"** is saved to session storage.
+    * Check that button links to **game.html**.
+
 
 #### "HARD" button
 1. Move mouse over button 
@@ -119,6 +122,8 @@ Check that all text and buttons load with correct styles and spacing, and that t
 2. Click on the button
    * Check that the box shadow effect is removed to give impression of button being pressed.
    * Within the console, check that **"difficulty: 'hard'"** is saved to session storage.
+   * Check that button links to **game.html**.
+
 
 #### "MAIN MENU" button
 1. Move mouse over button 
@@ -171,46 +176,40 @@ For the purpose of speeding up testing, the number of beeps required to win was 
    * Check that the button links to **index.html**.
 
 #### Win game modal
-1. Move mouse over button 
-   * ensure hover effect is active.
+1. Move mouse over **'CLOSE'** button 
+   * Ensure hover effect is active.
    
-2. Move mouse over link 
-   * ensure hover effect is active.
-   
-3. Win a game on easy or normal difficulty
+2. Having won a game on easy or normal difficulty
     * Ensure the **"YOU WIN"** modal is triggered
-    * On the modal, ensure link to **difficulty.html** is presented.
+    * On the modal, ensure link to **difficulty.html** is displayed, links correctly, and the hover effect is triggered when the mouse is moved over.
     
-4. Win a game on hard difficulty
+3. Having won a game on hard difficulty
     * Ensure the **"YOU WIN"** modal is triggered
     * On the modal, ensure the "Congratulations..." text is presented.
     
-5. Click on the **"CLOSE"** button
+4. Click on the **"CLOSE"** button
     * Check that the box shadow effect is removed to give impression of button being pressed
     * Ensure the modal is successfully closed.
   
-6. With the modal visible, click outside of modal body
+5. With the modal visible, click outside of modal body
     * Ensure the modal is successfully closed.
 
 #### Lose game modal
-1. Move mouse over button 
+1. Move mouse over **'CLOSE'** button 
    * ensure hover effect is active.
    
-2. Move mouse over link 
-   * ensure hover effect is active.
-   
-3. Lose a game on normal or hard difficulty
+2. Having lost a game on normal or hard difficulty
     * Ensure the **"YOU LOST"** modal is triggered
-    * On the modal, ensure link to **difficulty.html** is presented.
+    * On the modal, ensure link to **difficulty.html** is displayed, links correctly, and the hover effect is triggered when the mouse is moved over.
     
-4. Lose a game on easy difficulty
+3. Having lost a game on easy difficulty
     * Ensure the **"YOU LOST"** modal is triggered
     
-5. Click on the **"CLOSE"** button
+4. Click on the **"CLOSE"** button
     * Check that the box shadow effect is removed to give impression of button being pressed
     * Ensure the modal is successfully closed.
   
-6. With the modal visible, click outside of modal body
+5. With the modal visible, click outside of modal body
     * Ensure the modal is successfully closed.
     
 ### Testing JavaScript functions and logic
@@ -226,11 +225,11 @@ Repeat these tests for all difficulty settings ensuring that the session storage
 2. Testing game functions (after pressing **"START"** button)
     * Ensure game begins.
     * Successfully repeat computer sequence - ensure a new round is started and that it is one beep longer than the previous round.
-    * Enter incorrect sequence - ensure that the game ends and **gameOver()** is called and functions correctly.
-    * Complete the game - ensure the **gameWin()** is called and functions correctly.
+    * Enter incorrect sequence - ensure that the game ends and the **loseGame()** function is called and functions correctly (all game buttons flash two times, the level display states 'GAME OVER!', the lose game jingle sounds and the 'loseGame' modal is triggered).
+    * Complete the game - ensure the **gameWin()** is called and functions correctly (all game buttons flash two times, the level display states 'YOU WIN!', the win game jingle sounds and the 'winGame' modal is triggered).
     * Press **'START'** button before game ends and during computers turn - ensure a new game is not started and the level display states "PLEASE WAIT".
     * Press **'START'** button before game ends and during users turn - ensure a new game is started.
-    * Press **'START'** button during **winGame()** and **loseGame()** - ensure a new game is not started and the level display states "PLEASE WAIT".
+    * Press **'START'** button during **winGame()** and **loseGame()** functions - ensure a new game is not started and the level display states "PLEASE WAIT".
 
 ### Additional Testing
 * Friends and family asked to visit the website and report on any bugs or UX issues.
@@ -238,4 +237,4 @@ Repeat these tests for all difficulty settings ensuring that the session storage
 * No undocumented issues have been found.
 
 ### Found Bugs
-During testing, a bug was found where if the user clicks on the **'START'** button whilst the **compPlay()** function is still being called by **setInterval()**. The **setInterval()** methods fails to be cleared by the **interval ID** and therefore **compPlay()** gets stuck in a loop. To fix this issue, the **START** button only triggers a new game once the **setInterval()** method has been cleared. This means that a new game cannot be started whilst the **compPlay()** function is running. Instead, the level display tells the user to 'PLEASE WAIT' until the **START** button becomes functional again once the compPlay() function has stopped.
+During testing, a bug was found where if the user clicks on the **'START'** button whilst the **compPlay()** function is still being called by **setInterval()**. The **setInterval()** method fails to be cleared by the **interval ID** and therefore **compPlay()** gets stuck in a loop. To fix this issue, the **START** button only triggers a new game once the **setInterval()** method has been cleared. This means that a new game cannot be started whilst the **compPlay()** function is running. Instead, the level display tells the user to 'PLEASE WAIT' until the **START** button becomes functional again once the compPlay() function has stopped.

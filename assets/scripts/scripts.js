@@ -249,7 +249,7 @@ function winGame() {
             gameWinJingle.play();
         }, 500);
     }
-};
+}
 /* This functions in the same way as winGame() */
 function loseGame() {
     startGameSafe = false;
@@ -269,7 +269,7 @@ function loseGame() {
             gameFailJingle.play();
         }, 500);
     }
-};
+}
 
 /* Remove normal CSS class on game buttons, and add 'lit up' CSS class. Wait .8 seconds before
 reverting back to normal CSS */

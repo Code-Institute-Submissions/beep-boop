@@ -63,7 +63,7 @@ Most of the text on the website is **'Bungee'** from Google Fonts. This font was
 
 For more verbose sections of the website, the font **'DM Mono'** from Google Fonts was used as it has a vaguely digital feel to it which suits the computer game aesthetic, whilst remaining clearly legible. This font can be found in the **'How to play'** modal, as well as in the descriptions of the difficulty options. [Click here to view DM mono font in use.](assets/images/readme-images/dm-mono-font.jpg)
 
-The font **'Digital-7'** was used in the level display to give the effect of it being an old LCD display, similar to that found on calculators. This helped add to the illusion of the website being a physical toy. [Click here to view the level display.](assets/images/readme-images/level-display.jpg)
+The font **'Digital-7'** was used in the level display to give the effect of it being an old LCD display, similar to that found on calculators. This helps add to the illusion of the website being a physical toy. [Click here to view the level display.](assets/images/readme-images/level-display.jpg)
 
 <a name="features"></a>
 ## Features
@@ -73,23 +73,23 @@ The website features 3 separate pages (**index.html**, **difficulty.html** and *
 #### Index.html
 This is the landing page for the website. The user is immediately presented with the game logo, followed by the tagline 'An audio / visual memory game' thus establishing the purpose of the website very quickly. Below this are 3 clearly labelled buttons:
 
-**PLAY WITH AUDIO** (Highly recommended) - By clicking on this button, the user moves through to the next page of the website (**difficulty.html**). The button also sets the key/value pair of **"audio: 'true'"** to the user's browsers session storage. This item is then evaluated in the JavaScript code, to determine whether audio is triggered when playing the game. 
+**PLAY WITH AUDIO** (Highly recommended) - By clicking on this button, the user moves through to the next page of the website (**difficulty.html**). The button also sets the key/value pair of **"audio: 'true'"** to the user's browser session storage. This item is then evaluated in the JavaScript code, to determine whether audio is triggered whilst playing the game. 
 
-**PLAY ON MUTE** - This functions the same way as the **'PLAY WITH AUDIO'**  button, however the key/value pair are set to **"audio: 'false'"**.
+**PLAY ON MUTE** - This functions in the same way as the **'PLAY WITH AUDIO'**  button, however the key/value pair are set to **"audio: 'false'"**.
 
 **HOW TO PLAY** - This button triggers a modal, which contains a short set of instructions on how to play the game. The modal can be closed either by clicking on the **'CLOSE'** button, or by clicking anywhere outside of the modal body.
 
 If the session storage item is not set (i.e. the user goes straight to **game.html**), the game defaults to audio being enabled as this is the recommended way to play the game.
 
 #### difficulty.html
-Once through to this page, the user is asked to **'SELECT DIFFICULTY'** and presented with a further 3 buttons titles **'EASY'**, **'NORMAL'** and **'HARD'**. Each button is accompanied by a short description of what each difficulty option entails. Again, by clicking on one of these buttons, a session storage item is set which is later evaluated in the JavaScript code and used to determine certain factors of the user's game experience.
+Once through to this page, the user is asked to **'SELECT DIFFICULTY'** and presented with a further 3 buttons titled **'EASY'**, **'NORMAL'** and **'HARD'**. Each button is accompanied by a short description of what each difficulty option entails. Again, by clicking on one of these buttons, a session storage item is set which is later evaluated in the JavaScript code and used to determine certain factors of the user's game experience.
 
 Below these three buttons, a more subtle button is offered to return the user to the **'MAIN MENU'** which links back to **index.html**. This ensures good UX as the user cannot get 'trapped' on this page and can return to the main menu to check how to play the game or select a different audio setting.
 
 #### game.html
-The **game.html** page contains the actual game aspect of the website. Below the BEEP - BOOP logo, the user finds 4 large buttons of varying colours. These are the buttons with which the user plays game. Beneath this, is another button which links the user back to the main menu. This button is styled in the same manner as the main menu link found on **difficulty.html** to ensure consistency throughout the website. Next to the main menu link is a level display which initially prompts the user to **'PRESS START'**, and then once the game has begun displays the current level of the game. Next to this is the **'START'** button which triggers the start of the game.
+The **game.html** page contains the actual game aspect of the website. Below the 'BEEP - BOOP' logo, the user finds 4 large buttons of varying colours. These are the buttons with which the user plays game. Beneath this, is another button which links the user back to the main menu. This button is styled in the same manner as the main menu link found on **difficulty.html** to ensure consistency throughout the website. Next to the main menu link is a level display which initially prompts the user to **'PRESS START'**, and then once the game has begun displays the current level of the game. Next to this is the **'START'** button which triggers the start of the game.
 
-Should the user be successful in completing the game, a 'success jingle' is triggered, the game buttons flash 2 times and the level display text changes to "YOU WON!". Following this, a modal pops up to congratulate the user and if the game was played on easy or normal difficuly, suggests playing again on a higher difficulty with a link to difficulty.html. Should the user lose the game, a 'fail jingle' and all the game buttons flash 2 times and the level display text changes to "GAME OVER!". Following this, a modal pops up to say the game is over, inform the user of which level they reached, and if played on easy or normal difficulty, suggests playing the game on an easier difficulty with a link to difficulty.html.
+Should the user be successful in completing the game, a 'success jingle' is triggered, the game buttons flash 2 times and the level display text changes to "YOU WON!". Following this, a modal pops up to congratulate the user and if the game was played on easy or normal difficuly, suggests playing again on a higher difficulty with a link to difficulty.html. Should the user lose the game, a 'fail jingle' is triggered, the game buttons flash 2 times and the level display text changes to "GAME OVER!". Following this, a modal pops up to say the game is over, inform the user of which level they reached, and if played on normal or hard difficulty, suggests playing the game on an easier difficulty with a link to difficulty.html.
 
 #### 404.html
 The **404.html** page is a custom 404 error response page should the user mis-type the URL. The page informs the user "There is no BEEP - BOOP here!" and provides a link to the main menu (index.html).
@@ -97,7 +97,7 @@ The **404.html** page is a custom 404 error response page should the user mis-ty
 #### Potential Future Features
 I think that the game and its features are best kept simple, however in the future I may look at adding 'lives' to the game that allow the user to replay a level without starting from level 1 should they make a mistake. The number of lives allowed could change depending on the difficulty level chosen by the user.
 
-Another idea would be to allow the user to set their own difficulty level by setting the length of the interval in between beeps, and by choosing how many beeps are required to complete the game.
+Another idea would be to allow the user to set their own difficulty level by setting the length of the interval in between beeps, and by choosing how many levels are required to complete the game.
 
 <a name="tech"></a>
 ## Languages and Technologies  Used
@@ -135,7 +135,7 @@ This website is written in HTML, CSS and JavaScript.
    * Used to ensure cross browser validity for CSS.
    
 10. [Am I Responsive?](http://ami.responsivedesign.is/)
-    * Used to test for responsive design and to create mock-ups found at the top of this README.
+    * Used to test for responsive design and to create the mock-ups found at the top of this README.
    
 11. [Audacity](https://www.audacityteam.org/)
     * Used to edit all the audio found on the website.
